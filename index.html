@@ -17,10 +17,12 @@
         body {
             min-height: 100vh;
             background: linear-gradient(135deg, #000000 0%, #1a0f00 50%, #2d1a00 100%);
+            background-attachment: fixed;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             padding: 20px;
+            overflow-y: auto;
         }
 
         .avin-container {
@@ -33,17 +35,16 @@
             border-radius: 40px;
             padding: 40px;
             box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
-            animation: goldenGlow 3s infinite;
-        }
-
-        @keyframes goldenGlow {
-            0%, 100% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.2); }
-            50% { box-shadow: 0 0 80px rgba(255, 215, 0, 0.4); }
+            margin: 20px auto;
+            opacity: 1;
+            transform: none;
         }
 
         .header {
             text-align: center;
             margin-bottom: 50px;
+            opacity: 1;
+            transform: none;
         }
 
         .logo {
@@ -56,12 +57,16 @@
             text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
             margin-bottom: 10px;
             letter-spacing: 2px;
+            opacity: 1;
+            transform: none;
         }
 
         .logo-sub {
             font-size: 1.5rem;
             color: #ffb347;
             margin-bottom: 20px;
+            opacity: 1;
+            transform: none;
         }
 
         .subtitle {
@@ -69,6 +74,8 @@
             font-size: 1.2rem;
             position: relative;
             display: inline-block;
+            opacity: 1;
+            transform: none;
         }
 
         .subtitle::before, .subtitle::after {
@@ -83,6 +90,8 @@
             border-collapse: separate;
             border-spacing: 0 15px;
             margin: 30px 0;
+            opacity: 1;
+            transform: none;
         }
 
         .avin-table th {
@@ -148,6 +157,8 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin: 50px 0;
+            opacity: 1;
+            transform: none;
         }
 
         .card {
@@ -156,10 +167,12 @@
             border-radius: 30px;
             padding: 30px 20px;
             text-align: center;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            opacity: 1;
+            transform: none;
         }
 
         .card::before {
@@ -238,6 +251,8 @@
             margin: 40px 0;
             border: 2px dashed #ffd700;
             text-align: center;
+            opacity: 1;
+            transform: none;
         }
 
         .offer-text {
@@ -261,6 +276,8 @@
             gap: 80px;
             margin: 50px 0;
             flex-wrap: wrap;
+            opacity: 1;
+            transform: none;
         }
 
         .stat-item {
@@ -290,6 +307,8 @@
             padding: 25px;
             border-radius: 50px;
             border: 1px solid rgba(255, 215, 0, 0.3);
+            opacity: 1;
+            transform: none;
         }
 
         .contact-item {
@@ -326,6 +345,8 @@
             padding-top: 30px;
             border-top: 1px solid rgba(255, 215, 0, 0.3);
             color: #ffb347;
+            opacity: 1;
+            transform: none;
         }
 
         .watermark {
@@ -482,42 +503,5 @@
             <div class="watermark">Avin Academy - Education with Passion</div>
         </div>
     </div>
-
-    <script>
-        const cards = document.querySelectorAll('.card');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        });
-
-        cards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
-
-        function calculatePrice(price, sessions) {
-            let total = price * sessions;
-            if (sessions >= 5) {
-                total = total * 0.9;
-            }
-            return total.toLocaleString();
-        }
-
-        const rows = document.querySelectorAll('.avin-table tbody tr');
-        rows.forEach(row => {
-            row.addEventListener('mouseenter', () => {
-                row.style.cursor = 'pointer';
-            });
-        });
-
-        console.log('به آکادمی آوین خوش آمدید! ✨');
-    </script>
 </body>
 </html>
