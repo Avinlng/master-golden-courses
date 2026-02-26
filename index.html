@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گلدن کلاس | آموزش خصوصی</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #000000 0%, #1a0f00 50%, #2d1a00 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .golden-container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 215, 0, 0.03);
+            backdrop-filter: blur(10px);
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #ffd700, #ffb347, #ff8c00, #ffd700) 1;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
+            animation: goldenGlow 3s infinite;
+        }
+
+        @keyframes goldenGlow {
+            0%, 100% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.2); }
+            50% { box-shadow: 0 0 80px rgba(255, 215, 0, 0.4); }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffd700, #ffb347, #ff8c00, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #ffb347;
+            font-size: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .subtitle::before, .subtitle::after {
+            content: "✦";
+            margin: 0 15px;
+            color: #ffd700;
+            font-size: 1.5rem;
+        }
+
+        .golden-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+            margin: 30px 0;
+        }
+
+        .golden-table th {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            color: #1a0f00;
+            font-weight: 700;
+            padding: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .golden-table td {
+            background: linear-gradient(145deg, #2a1a00, #1a0f00);
+            color: #ffb347;
+            padding: 20px;
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .golden-table tr:hover td {
+            transform: scale(1.02);
+            border: 1px solid #ffd700;
+            box-shadow: 0 5px 25px rgba(255, 215, 0, 0.3);
+            background: linear-gradient(145deg, #3a2500, #2a1a00);
+        }
+
+        .course-name {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .price {
+            color: #ff8c00;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+        }
+
+        .duration {
+            background: linear-gradient(135deg, #ffd700, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .special-badge {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a0f00;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .golden-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #2a1a00, #1a0f00);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 30px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+
+        .card:hover::before {
+            animation: shine 1.5s;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #ffd700;
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            color: #ffd700;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card-price {
+            color: #ff8c00;
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 15px 0;
+        }
+
+        .card-duration {
+            color: #ffb347;
+            margin-bottom: 20px;
+        }
+
+        .golden-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border: none;
+            color: #1a0f00;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #ffd700;
+        }
+
+        .golden-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #ffd700;
+        }
+
+        .offer-section {
+            background: linear-gradient(135deg, #2a1a00, #1a0f00);
+            border-radius: 30px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 2px dashed #ffd700;
+            text-align: center;
+        }
+
+        .offer-text {
+            font-size: 1.5rem;
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        .offer-percent {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 10px 0;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: #ffb347;
+            font-size: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            color: #ffb347;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item span {
+            color: #ffd700;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+            color: #ffb347;
+        }
+
+        @media (max-width: 768px) {
+            .golden-container {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .golden-table th, .golden-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .card-price {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="golden-container">
+        <div class="header">
+            <h1 class="title">✨ گلدن کلاس ✨</h1>
+            <div class="subtitle">آموزش خصوصی درجه یک</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">۹۸٪</div>
+                <div class="stat-label">رضایت دانش‌آموزان</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">۱۰۰۰+</div>
+                <div class="stat-label">دانش‌آموز موفق</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">۱۵</div>
+                <div class="stat-label">استاد برتر</div>
+            </div>
+        </div>
+
+        <table class="golden-table">
+            <thead>
+                <tr>
+                    <th>دوره آموزشی</th>
+                    <th>مقطع</th>
+                    <th>شهریه ویژه</th>
+                    <th>مدت جلسه</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="course-name">📐 ریاضی دبیرستان</td>
+                    <td>دهم - یازدهم - دوازدهم</td>
+                    <td class="price">۳۵۰,۰۰۰ تومان</td>
+                    <td class="duration">۷۵ دقیقه</td>
+                </tr>
+                <tr>
+                    <td class="course-name">🐍 پایتون حرفه‌ای</td>
+                    <td>برنامه‌نویسی</td>
+                    <td class="price">۴۰۰,۰۰۰ تومان</td>
+                    <td class="duration">۷۵ دقیقه</td>
+                </tr>
+                <tr>
+                    <td class="course-name">📖 عربی دبیرستان</td>
+                    <td>متوسطه دوم</td>
+                    <td class="price">۲۳۰,۰۰۰ تومان</td>
+                    <td class="duration">۷۵ دقیقه</td>
+                </tr>
+                <tr>
+                    <td class="course-name">🎯 بسته طلایی تیزهوشان</td>
+                    <td>نمونه دولتی + آزمون</td>
+                    <td class="price">۳۸۰,۰۰۰ تومان</td>
+                    <td class="duration">۹۰ دقیقه <span class="special-badge">ویژه</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="golden-cards">
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <div class="card-title">ریاضیات</div>
+                <div class="card-price">۳۵۰k</div>
+                <div class="card-duration">۷۵ دقیقه</div>
+                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <div class="card-title">پایتون</div>
+                <div class="card-price">۴۰۰k</div>
+                <div class="card-duration">۷۵ دقیقه</div>
+                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <div class="card-title">عربی</div>
+                <div class="card-price">۲۳۰k</div>
+                <div class="card-duration">۷۵ دقیقه</div>
+                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <div class="card-title">تیزهوشان</div>
+                <div class="card-price">۳۸۰k</div>
+                <div class="card-duration">۹۰ دقیقه</div>
+                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+            </div>
+        </div>
+
+        <div class="offer-section">
+            <div class="offer-text">✨ پیشنهاد ویژه ✨</div>
+            <div class="offer-percent">۱۰٪ تخفیف</div>
+            <div class="offer-text">برای رزرو ۵ جلسه یا بیشتر</div>
+            <button class="golden-btn" style="margin-top: 20px;" onclick="alert('کد تخفیف: GOLDEN10')">دریافت کد تخفیف</button>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item"><span>📱</span> ۰۹۱۲-۳۳۴-۴۵۵۶</div>
+            <div class="contact-item"><span>📧</span> golden.class@edu.ir</div>
+            <div class="contact-item"><span>📍</span> تهران - خیابان آموزش</div>
+            <div class="contact-item"><span>⏰</span> ۲۴ ساعته</div>
+        </div>
+
+        <div class="footer">
+            <div>✨ با افتخار در خدمت شما هستیم ✨</div>
+            <div style="margin-top: 10px; font-size: 0.9rem;">تمام حقوق مادی و معنوی محفوظ است © ۱۴۰۳</div>
+        </div>
+    </div>
+
+    <script>
+        // اضافه کردن انیمیشن به کارت‌ها هنگام اسکرول
+        const cards = document.querySelectorAll('.card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+
+        // محاسبه قیمت با تخفیف
+        function calculatePrice(price, sessions) {
+            let total = price * sessions;
+            if (sessions >= 5) {
+                total = total * 0.9; // 10% off
+            }
+            return total.toLocaleString();
+        }
+
+        // اضافه کردن افکت hover به ردیف‌های جدول
+        const rows = document.querySelectorAll('.golden-table tbody tr');
+        rows.forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body>
+</html>
