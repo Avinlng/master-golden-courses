@@ -283,9 +283,13 @@
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 30px;
+            margin: 40px 0;
             flex-wrap: wrap;
+            background: linear-gradient(145deg, #2a1a00, #1a0f00);
+            padding: 25px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
         }
 
         .contact-item {
@@ -294,11 +298,26 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            padding: 5px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+            border: 1px solid #ffd700;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
         }
 
         .contact-item span {
             color: #ffd700;
             font-size: 1.5rem;
+        }
+
+        .contact-item .ltr {
+            direction: ltr;
+            unicode-bidi: embed;
         }
 
         .footer {
@@ -335,6 +354,16 @@
 
             .stats {
                 gap: 40px;
+            }
+
+            .contact-info {
+                padding: 15px;
+                gap: 15px;
+            }
+
+            .contact-item {
+                font-size: 0.9rem;
+                padding: 5px 10px;
             }
         }
     </style>
@@ -401,28 +430,28 @@
                 <div class="card-title">ریاضیات آوین</div>
                 <div class="card-price">۳۵۰k</div>
                 <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
             </div>
             <div class="card">
                 <div class="card-icon">💻</div>
                 <div class="card-title">پایتون آوین</div>
                 <div class="card-price">۴۰۰k</div>
                 <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
             </div>
             <div class="card">
                 <div class="card-icon">📚</div>
                 <div class="card-title">عربی آوین</div>
                 <div class="card-price">۲۳۰k</div>
                 <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
             </div>
             <div class="card">
                 <div class="card-icon">🏆</div>
                 <div class="card-title">تیزهوشان آوین</div>
                 <div class="card-price">۳۸۰k</div>
                 <div class="card-duration">۹۰ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
             </div>
         </div>
 
@@ -434,10 +463,22 @@
         </div>
 
         <div class="contact-info">
-            <div class="contact-item"><span>📱</span> ۰۹۱۲-۳۳۴-۴۵۵۶</div>
-            <div class="contact-item"><span>📧</span> info@avinacademy.ir</div>
-            <div class="contact-item"><span>📍</span> تهران - خیابان آوین</div>
-            <div class="contact-item"><span>⏰</span> ۲۴ ساعته</div>
+            <div class="contact-item">
+                <span>📱</span>
+                <span class="ltr">۰۹۱۷۴۱۲۳۴۲۸</span>
+            </div>
+            <div class="contact-item">
+                <span>📧</span>
+                <span class="ltr">avinlangroodi4@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span>📍</span>
+                تهران - خیابان آوین
+            </div>
+            <div class="contact-item">
+                <span>⏰</span>
+                ۲۴ ساعته
+            </div>
         </div>
 
         <div class="footer">
