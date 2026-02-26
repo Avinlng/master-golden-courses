@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>گلدن کلاس | آموزش خصوصی</title>
+    <title>آکادمی آوین | آموزش خصوصی</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
         
@@ -23,7 +23,7 @@
             padding: 20px;
         }
 
-        .golden-container {
+        .avin-container {
             max-width: 1200px;
             width: 100%;
             background: rgba(255, 215, 0, 0.03);
@@ -46,16 +46,22 @@
             margin-bottom: 50px;
         }
 
-        .title {
-            font-size: 4rem;
+        .logo {
+            font-size: 5rem;
             font-weight: 900;
             background: linear-gradient(135deg, #ffd700, #ffb347, #ff8c00, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             letter-spacing: 2px;
+        }
+
+        .logo-sub {
+            font-size: 1.5rem;
+            color: #ffb347;
+            margin-bottom: 20px;
         }
 
         .subtitle {
@@ -72,14 +78,14 @@
             font-size: 1.5rem;
         }
 
-        .golden-table {
+        .avin-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0 15px;
             margin: 30px 0;
         }
 
-        .golden-table th {
+        .avin-table th {
             background: linear-gradient(135deg, #ffd700, #ffb347);
             color: #1a0f00;
             font-weight: 700;
@@ -90,7 +96,7 @@
             box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
         }
 
-        .golden-table td {
+        .avin-table td {
             background: linear-gradient(145deg, #2a1a00, #1a0f00);
             color: #ffb347;
             padding: 20px;
@@ -101,7 +107,7 @@
             font-weight: 500;
         }
 
-        .golden-table tr:hover td {
+        .avin-table tr:hover td {
             transform: scale(1.02);
             border: 1px solid #ffd700;
             box-shadow: 0 5px 25px rgba(255, 215, 0, 0.3);
@@ -137,7 +143,7 @@
             font-weight: 700;
         }
 
-        .golden-cards {
+        .avin-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
@@ -207,7 +213,7 @@
             margin-bottom: 20px;
         }
 
-        .golden-btn {
+        .avin-btn {
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             border: none;
             color: #1a0f00;
@@ -220,7 +226,7 @@
             border: 1px solid #ffd700;
         }
 
-        .golden-btn:hover {
+        .avin-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px #ffd700;
         }
@@ -251,10 +257,10 @@
 
         .stats {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 80px;
             margin: 50px 0;
             flex-wrap: wrap;
-            gap: 20px;
         }
 
         .stat-item {
@@ -303,16 +309,22 @@
             color: #ffb347;
         }
 
+        .watermark {
+            font-size: 0.9rem;
+            color: rgba(255, 215, 0, 0.3);
+            margin-top: 10px;
+        }
+
         @media (max-width: 768px) {
-            .golden-container {
+            .avin-container {
                 padding: 20px;
             }
             
-            .title {
-                font-size: 2.5rem;
+            .logo {
+                font-size: 3.5rem;
             }
             
-            .golden-table th, .golden-table td {
+            .avin-table th, .avin-table td {
                 padding: 10px;
                 font-size: 0.9rem;
             }
@@ -320,13 +332,18 @@
             .card-price {
                 font-size: 1.5rem;
             }
+
+            .stats {
+                gap: 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="golden-container">
+    <div class="avin-container">
         <div class="header">
-            <h1 class="title">✨ گلدن کلاس ✨</h1>
+            <div class="logo">آکادمی آوین</div>
+            <div class="logo-sub">✨ Avin Academy ✨</div>
             <div class="subtitle">آموزش خصوصی درجه یک</div>
         </div>
 
@@ -339,13 +356,9 @@
                 <div class="stat-number">۱۰۰۰+</div>
                 <div class="stat-label">دانش‌آموز موفق</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">۱۵</div>
-                <div class="stat-label">استاد برتر</div>
-            </div>
         </div>
 
-        <table class="golden-table">
+        <table class="avin-table">
             <thead>
                 <tr>
                     <th>دوره آموزشی</th>
@@ -382,59 +395,59 @@
             </tbody>
         </table>
 
-        <div class="golden-cards">
+        <div class="avin-cards">
             <div class="card">
                 <div class="card-icon">🎓</div>
-                <div class="card-title">ریاضیات</div>
+                <div class="card-title">ریاضیات آوین</div>
                 <div class="card-price">۳۵۰k</div>
                 <div class="card-duration">۷۵ دقیقه</div>
-                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
             </div>
             <div class="card">
                 <div class="card-icon">💻</div>
-                <div class="card-title">پایتون</div>
+                <div class="card-title">پایتون آوین</div>
                 <div class="card-price">۴۰۰k</div>
                 <div class="card-duration">۷۵ دقیقه</div>
-                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
             </div>
             <div class="card">
                 <div class="card-icon">📚</div>
-                <div class="card-title">عربی</div>
+                <div class="card-title">عربی آوین</div>
                 <div class="card-price">۲۳۰k</div>
                 <div class="card-duration">۷۵ دقیقه</div>
-                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
             </div>
             <div class="card">
                 <div class="card-icon">🏆</div>
-                <div class="card-title">تیزهوشان</div>
+                <div class="card-title">تیزهوشان آوین</div>
                 <div class="card-price">۳۸۰k</div>
                 <div class="card-duration">۹۰ دقیقه</div>
-                <button class="golden-btn" onclick="alert('شماره تماس: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو طلایی</button>
+                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۲۳۳۴۴۵۵۶')">رزرو دوره</button>
             </div>
         </div>
 
         <div class="offer-section">
-            <div class="offer-text">✨ پیشنهاد ویژه ✨</div>
+            <div class="offer-text">✨ پیشنهاد ویژه آکادمی آوین ✨</div>
             <div class="offer-percent">۱۰٪ تخفیف</div>
             <div class="offer-text">برای رزرو ۵ جلسه یا بیشتر</div>
-            <button class="golden-btn" style="margin-top: 20px;" onclick="alert('کد تخفیف: GOLDEN10')">دریافت کد تخفیف</button>
+            <button class="avin-btn" style="margin-top: 20px;" onclick="alert('کد تخفیف آوین: AVIN10')">دریافت کد تخفیف</button>
         </div>
 
         <div class="contact-info">
             <div class="contact-item"><span>📱</span> ۰۹۱۲-۳۳۴-۴۵۵۶</div>
-            <div class="contact-item"><span>📧</span> golden.class@edu.ir</div>
-            <div class="contact-item"><span>📍</span> تهران - خیابان آموزش</div>
+            <div class="contact-item"><span>📧</span> info@avinacademy.ir</div>
+            <div class="contact-item"><span>📍</span> تهران - خیابان آوین</div>
             <div class="contact-item"><span>⏰</span> ۲۴ ساعته</div>
         </div>
 
         <div class="footer">
             <div>✨ با افتخار در خدمت شما هستیم ✨</div>
-            <div style="margin-top: 10px; font-size: 0.9rem;">تمام حقوق مادی و معنوی محفوظ است © ۱۴۰۳</div>
+            <div style="margin-top: 10px; font-size: 0.9rem;">تمام حقوق مادی و معنوی محفوظ است © ۱۴۰۳ | آکادمی آوین</div>
+            <div class="watermark">Avin Academy - Education with Passion</div>
         </div>
     </div>
 
     <script>
-        // اضافه کردن انیمیشن به کارت‌ها هنگام اسکرول
         const cards = document.querySelectorAll('.card');
         
         const observer = new IntersectionObserver((entries) => {
@@ -453,22 +466,22 @@
             observer.observe(card);
         });
 
-        // محاسبه قیمت با تخفیف
         function calculatePrice(price, sessions) {
             let total = price * sessions;
             if (sessions >= 5) {
-                total = total * 0.9; // 10% off
+                total = total * 0.9;
             }
             return total.toLocaleString();
         }
 
-        // اضافه کردن افکت hover به ردیف‌های جدول
-        const rows = document.querySelectorAll('.golden-table tbody tr');
+        const rows = document.querySelectorAll('.avin-table tbody tr');
         rows.forEach(row => {
             row.addEventListener('mouseenter', () => {
                 row.style.cursor = 'pointer';
             });
         });
+
+        console.log('به آکادمی آوین خوش آمدید! ✨');
     </script>
 </body>
 </html>
