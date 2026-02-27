@@ -130,6 +130,25 @@
             font-size: 1.1rem;
         }
 
+        .reserve-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border: none;
+            color: #1a0f00;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #ffd700;
+            white-space: nowrap;
+        }
+
+        .reserve-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffd700;
+        }
+
         .special-badge {
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             color: #1a0f00;
@@ -138,94 +157,6 @@
             font-size: 0.8rem;
             font-weight: 700;
             margin-right: 5px;
-        }
-
-        .avin-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 50px 0;
-        }
-
-        .card {
-            background: linear-gradient(145deg, #2a1a00, #1a0f00);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 30px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: 0.5s;
-        }
-
-        .card:hover::before {
-            animation: shine 1.5s;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: #ffd700;
-            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
-        }
-
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .card-title {
-            color: #ffd700;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .card-price {
-            color: #ff8c00;
-            font-size: 2rem;
-            font-weight: 900;
-            margin: 15px 0;
-        }
-
-        .card-duration {
-            color: #ffb347;
-            margin-bottom: 20px;
-        }
-
-        .avin-btn {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            border: none;
-            color: #1a0f00;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid #ffd700;
-        }
-
-        .avin-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px #ffd700;
         }
 
         .offer-section {
@@ -444,10 +375,6 @@
                 font-size: 0.9rem;
             }
             
-            .card-price {
-                font-size: 1.5rem;
-            }
-
             .stats {
                 gap: 40px;
             }
@@ -474,6 +401,11 @@
             .check-item {
                 font-size: 1rem;
                 padding: 10px 15px;
+            }
+
+            .reserve-btn {
+                padding: 5px 12px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -504,6 +436,7 @@
                     <th>مقطع</th>
                     <th>شهریه ویژه</th>
                     <th>مدت جلسه</th>
+                    <th>رزرو</th>
                 </tr>
             </thead>
             <tbody>
@@ -512,71 +445,38 @@
                     <td>هفتم - هشتم - نهم</td>
                     <td class="price">۳۳۰,۰۰۰ تومان</td>
                     <td class="duration-cell">۷۵ دقیقه</td>
+                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
                 </tr>
                 <tr>
                     <td class="course-name">📐 ریاضی دبیرستان</td>
                     <td>دهم - یازدهم - دوازدهم</td>
                     <td class="price">۳۵۰,۰۰۰ تومان</td>
                     <td class="duration-cell">۷۵ دقیقه</td>
+                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
                 </tr>
                 <tr>
                     <td class="course-name">🐍 پایتون حرفه‌ای</td>
                     <td>برنامه‌نویسی</td>
                     <td class="price">۴۰۰,۰۰۰ تومان</td>
                     <td class="duration-cell">۷۵ دقیقه</td>
+                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
                 </tr>
                 <tr>
                     <td class="course-name">📖 عربی دبیرستان</td>
                     <td>متوسطه دوم</td>
                     <td class="price">۲۳۰,۰۰۰ تومان</td>
                     <td class="duration-cell">۷۵ دقیقه</td>
+                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
                 </tr>
                 <tr>
                     <td class="course-name">🎯 بسته طلایی تیزهوشان و نمونه دولتی</td>
                     <td>هفتم - هشتم - نهم + آزمون</td>
                     <td class="price">۳۸۰,۰۰۰ تومان</td>
                     <td class="duration-cell">۷۵ دقیقه</td>
+                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
                 </tr>
             </tbody>
         </table>
-
-        <div class="avin-cards">
-            <div class="card">
-                <div class="card-icon">📐</div>
-                <div class="card-title">ریاضی متوسطه اول</div>
-                <div class="card-price">۳۳۰k</div>
-                <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
-            </div>
-            <div class="card">
-                <div class="card-icon">🎓</div>
-                <div class="card-title">ریاضی دبیرستان</div>
-                <div class="card-price">۳۵۰k</div>
-                <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
-            </div>
-            <div class="card">
-                <div class="card-icon">💻</div>
-                <div class="card-title">پایتون</div>
-                <div class="card-price">۴۰۰k</div>
-                <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
-            </div>
-            <div class="card">
-                <div class="card-icon">📚</div>
-                <div class="card-title">عربی</div>
-                <div class="card-price">۲۳۰k</div>
-                <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
-            </div>
-            <div class="card">
-                <div class="card-icon">🏆</div>
-                <div class="card-title">تیزهوشان و نمونه دولتی</div>
-                <div class="card-price">۳۸۰k</div>
-                <div class="card-duration">۷۵ دقیقه</div>
-                <button class="avin-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
-            </div>
-        </div>
 
         <div class="offer-section">
             <div class="offer-title">🎁 پیشنهاد ویژه آکادمی آوین 🎁</div>
