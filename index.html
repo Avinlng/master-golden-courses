@@ -75,88 +75,187 @@
             font-size: 1.5rem;
         }
 
-        .avin-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0 15px;
-            margin: 30px 0;
+        /* دسته‌بندی دوره‌ها */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
         }
 
-        .avin-table th {
-            background: linear-gradient(135deg, #ffd700, #ffb347);
-            color: #1a0f00;
-            font-weight: 700;
-            padding: 20px;
-            font-size: 1.2rem;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3);
-        }
-
-        .avin-table td {
+        .category-item {
             background: linear-gradient(145deg, #2a1a00, #1a0f00);
-            color: #ffb347;
-            padding: 20px;
-            text-align: center;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            border: 2px solid #ffd700;
+            border-radius: 60px;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffd700;
+            cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 500;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+            position: relative;
+            min-width: 180px;
+            text-align: center;
         }
 
-        .avin-table tr:hover td {
-            transform: scale(1.02);
-            border: 1px solid #ffd700;
-            box-shadow: 0 5px 25px rgba(255, 215, 0, 0.3);
+        .category-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
             background: linear-gradient(145deg, #3a2500, #2a1a00);
+        }
+
+        .category-item.active {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a0f00;
+            border-color: white;
+        }
+
+        .dropdown-icon {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            margin-right: 10px;
+        }
+
+        .category-item.active .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        /* منوی اصلی */
+        .main-dropdown {
+            background: linear-gradient(145deg, #2a1a00, #1a0f00);
+            border: 2px solid #ffd700;
+            border-radius: 30px;
+            margin-top: 15px;
+            padding: 20px;
+            display: none;
+            animation: slideDown 0.3s ease;
+            box-shadow: 0 20px 60px rgba(255, 215, 0, 0.3);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-dropdown.show {
+            display: block;
+        }
+
+        /* سطوح منو */
+        .menu-level {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .level-item {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        .level-title {
+            color: #ffd700;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffd700;
+            margin-bottom: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .level-title:hover {
+            transform: scale(1.05);
+            color: #ff8c00;
+        }
+
+        .level-title i {
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+
+        .submenu {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .submenu.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .course-item {
+            background: linear-gradient(145deg, #3a2500, #2a1a00);
+            border-radius: 15px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .course-item:hover {
+            transform: translateX(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .course-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
         }
 
         .course-name {
             color: #ffd700;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
-        .price {
+        .course-price {
             color: #ff8c00;
             font-weight: 900;
-            font-size: 1.2rem;
-            text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
         }
 
-        .duration-cell {
-            color: #ffd700;
-            font-weight: 700;
-            font-size: 1.1rem;
+        .course-type {
+            color: #ffb347;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
         }
 
-        .reserve-btn {
+        .reserve-small-btn {
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             border: none;
             color: #1a0f00;
-            padding: 8px 20px;
+            padding: 5px 15px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             cursor: pointer;
             transition: all 0.3s;
             border: 1px solid #ffd700;
-            white-space: nowrap;
+            width: 100%;
         }
 
-        .reserve-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px #ffd700;
-        }
-
-        .special-badge {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            color: #1a0f00;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-right: 5px;
+        .reserve-small-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #ffd700;
         }
 
         .offer-section {
@@ -370,11 +469,16 @@
                 font-size: 3.5rem;
             }
             
-            .avin-table th, .avin-table td {
-                padding: 10px;
-                font-size: 0.9rem;
+            .category-item {
+                font-size: 1.2rem;
+                padding: 12px 25px;
+                min-width: 140px;
             }
-            
+
+            .menu-level {
+                flex-direction: column;
+            }
+
             .stats {
                 gap: 40px;
             }
@@ -402,11 +506,6 @@
                 font-size: 1rem;
                 padding: 10px 15px;
             }
-
-            .reserve-btn {
-                padding: 5px 12px;
-                font-size: 0.8rem;
-            }
         }
     </style>
 </head>
@@ -429,54 +528,163 @@
             </div>
         </div>
 
-        <table class="avin-table">
-            <thead>
-                <tr>
-                    <th>دوره آموزشی</th>
-                    <th>مقطع</th>
-                    <th>شهریه ویژه</th>
-                    <th>مدت جلسه</th>
-                    <th>رزرو</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="course-name">📐 ریاضی متوسطه اول</td>
-                    <td>هفتم - هشتم - نهم</td>
-                    <td class="price">۳۳۰,۰۰۰ تومان</td>
-                    <td class="duration-cell">۷۵ دقیقه</td>
-                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
-                </tr>
-                <tr>
-                    <td class="course-name">📐 ریاضی دبیرستان</td>
-                    <td>دهم - یازدهم - دوازدهم</td>
-                    <td class="price">۳۵۰,۰۰۰ تومان</td>
-                    <td class="duration-cell">۷۵ دقیقه</td>
-                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
-                </tr>
-                <tr>
-                    <td class="course-name">🐍 پایتون حرفه‌ای</td>
-                    <td>برنامه‌نویسی</td>
-                    <td class="price">۴۰۰,۰۰۰ تومان</td>
-                    <td class="duration-cell">۷۵ دقیقه</td>
-                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
-                </tr>
-                <tr>
-                    <td class="course-name">📖 عربی دبیرستان</td>
-                    <td>متوسطه دوم</td>
-                    <td class="price">۲۳۰,۰۰۰ تومان</td>
-                    <td class="duration-cell">۷۵ دقیقه</td>
-                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
-                </tr>
-                <tr>
-                    <td class="course-name">🎯 بسته طلایی تیزهوشان و نمونه دولتی</td>
-                    <td>هفتم - هشتم - نهم + آزمون</td>
-                    <td class="price">۳۸۰,۰۰۰ تومان</td>
-                    <td class="duration-cell">۷۵ دقیقه</td>
-                    <td><button class="reserve-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- دسته‌بندی دوره‌ها -->
+        <div class="categories">
+            <div class="category-item" onclick="toggleMainDropdown('math')">
+                <span>📐 ریاضیات</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('other')">
+                <span>📚 سایر دوره‌ها</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+        </div>
+
+        <!-- منوی اصلی ریاضیات -->
+        <div id="math-dropdown" class="main-dropdown">
+            <div class="menu-level">
+                <!-- دبستان -->
+                <div class="level-item">
+                    <div class="level-title" onclick="toggleSubMenu('primary')">
+                        <span>🔢 دبستان</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="primary-submenu" class="submenu">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">ریاضیات دبستان</span>
+                                <span class="course-price">۳۱۵k</span>
+                            </div>
+                            <div class="course-type">普通</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">نیازهای ویژه</span>
+                                <span class="course-price">۳۲۵k</span>
+                            </div>
+                            <div class="course-type">ویژه</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- راهنمایی (متوسطه اول) -->
+                <div class="level-item">
+                    <div class="level-title" onclick="toggleSubMenu('guidance')">
+                        <span>📚 راهنمایی</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="guidance-submenu" class="submenu">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">تشریحی</span>
+                                <span class="course-price">۳۲۰k</span>
+                            </div>
+                            <div class="course-type">هفتم - هشتم - نهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">تستی</span>
+                                <span class="course-price">۳۳۵k</span>
+                            </div>
+                            <div class="course-type">هفتم - هشتم - نهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">نمونه دولتی + تیزهوشان</span>
+                                <span class="course-price">۳۸۰k</span>
+                            </div>
+                            <div class="course-type">هفتم - هشتم - نهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دبیرستان -->
+                <div class="level-item">
+                    <div class="level-title" onclick="toggleSubMenu('highschool')">
+                        <span>🏫 دبیرستان</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="highschool-submenu" class="submenu">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">حسابان</span>
+                                <span class="course-price">۳۵۰k</span>
+                            </div>
+                            <div class="course-type">یازدهم - دوازدهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">هندسه</span>
+                                <span class="course-price">۳۵۰k</span>
+                            </div>
+                            <div class="course-type">دهم - یازدهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">ریاضی دهم</span>
+                                <span class="course-price">۳۵۰k</span>
+                            </div>
+                            <div class="course-type">دهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">آمار و احتمال</span>
+                                <span class="course-price">۳۳۵k</span>
+                            </div>
+                            <div class="course-type">یازدهم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- منوی اصلی سایر دوره‌ها -->
+        <div id="other-dropdown" class="main-dropdown">
+            <div class="menu-level">
+                <div class="level-item">
+                    <div class="level-title" onclick="toggleSubMenu('programming')">
+                        <span>💻 برنامه‌نویسی</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="programming-submenu" class="submenu">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">پایتون حرفه‌ای</span>
+                                <span class="course-price">۴۰۰k</span>
+                            </div>
+                            <div class="course-type">مقدماتی تا پیشرفته</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-item">
+                    <div class="level-title" onclick="toggleSubMenu('arabic')">
+                        <span>📖 عربی</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="arabic-submenu" class="submenu">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">عربی دبیرستان</span>
+                                <span class="course-price">۲۳۰k</span>
+                            </div>
+                            <div class="course-type">متوسطه دوم</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="offer-section">
             <div class="offer-title">🎁 پیشنهاد ویژه آکادمی آوین 🎁</div>
@@ -537,5 +745,74 @@
             <div class="watermark">Avin Academy - Education with Passion</div>
         </div>
     </div>
+
+    <script>
+        // باز و بسته کردن منوی اصلی
+        function toggleMainDropdown(category) {
+            const mathDropdown = document.getElementById('math-dropdown');
+            const otherDropdown = document.getElementById('other-dropdown');
+            const categoryItems = document.querySelectorAll('.category-item');
+            
+            // بستن همه منوها
+            mathDropdown.classList.remove('show');
+            otherDropdown.classList.remove('show');
+            
+            // غیرفعال کردن حالت active همه دکمه‌ها
+            categoryItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // باز کردن منوی انتخاب شده
+            if (category === 'math') {
+                mathDropdown.classList.add('show');
+                event.currentTarget.classList.add('active');
+            } else {
+                otherDropdown.classList.add('show');
+                event.currentTarget.classList.add('active');
+            }
+            
+            // بستن همه زیرمنوها
+            closeAllSubMenus();
+        }
+
+        // باز و بسته کردن زیرمنوها
+        function toggleSubMenu(submenuId) {
+            const submenu = document.getElementById(submenuId + '-submenu');
+            const allSubmenus = document.querySelectorAll('.submenu');
+            
+            // بستن همه زیرمنوها به جز زیرمنوی انتخاب شده
+            allSubmenus.forEach(menu => {
+                if (menu.id !== submenuId + '-submenu') {
+                    menu.classList.remove('show');
+                }
+            });
+            
+            // باز یا بسته کردن زیرمنوی انتخاب شده
+            submenu.classList.toggle('show');
+        }
+
+        // بستن همه زیرمنوها
+        function closeAllSubMenus() {
+            const allSubmenus = document.querySelectorAll('.submenu');
+            allSubmenus.forEach(menu => {
+                menu.classList.remove('show');
+            });
+        }
+
+        // بستن منوها با کلیک خارج
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.category-item') && 
+                !event.target.closest('.main-dropdown') && 
+                !event.target.closest('.level-title')) {
+                
+                document.getElementById('math-dropdown').classList.remove('show');
+                document.getElementById('other-dropdown').classList.remove('show');
+                document.querySelectorAll('.category-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                closeAllSubMenus();
+            }
+        });
+    </script>
 </body>
 </html>
