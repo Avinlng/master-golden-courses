@@ -75,7 +75,6 @@
             font-size: 1.5rem;
         }
 
-        /* دسته‌بندی دوره‌ها */
         .categories {
             display: flex;
             justify-content: center;
@@ -122,7 +121,6 @@
             transform: rotate(180deg);
         }
 
-        /* منوی اصلی */
         .main-dropdown {
             background: linear-gradient(145deg, #2a1a00, #1a0f00);
             border: 2px solid #ffd700;
@@ -149,7 +147,6 @@
             display: block;
         }
 
-        /* سطوح منو */
         .menu-level {
             display: flex;
             gap: 20px;
@@ -237,6 +234,7 @@
             color: #ffb347;
             font-size: 0.9rem;
             margin-bottom: 8px;
+            text-align: right;
         }
 
         .reserve-small-btn {
@@ -528,22 +526,23 @@
             </div>
         </div>
 
-        <!-- دسته‌بندی دوره‌ها -->
         <div class="categories">
-            <div class="category-item" onclick="toggleMainDropdown('math')">
-                <span>📐 ریاضیات</span>
+            <div class="category-item" onclick="toggleMainDropdown('specialized')">
+                <span>📐 دروس اختصاصی</span>
                 <span class="dropdown-icon">▼</span>
             </div>
-            <div class="category-item" onclick="toggleMainDropdown('other')">
-                <span>📚 سایر دوره‌ها</span>
+            <div class="category-item" onclick="toggleMainDropdown('general')">
+                <span>📚 دروس عمومی</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('computer')">
+                <span>💻 کامپیوتر</span>
                 <span class="dropdown-icon">▼</span>
             </div>
         </div>
 
-        <!-- منوی اصلی ریاضیات -->
-        <div id="math-dropdown" class="main-dropdown">
+        <div id="specialized-dropdown" class="main-dropdown">
             <div class="menu-level">
-                <!-- دبستان -->
                 <div class="level-item">
                     <div class="level-title" onclick="toggleSubMenu('primary')">
                         <span>🔢 دبستان</span>
@@ -555,7 +554,7 @@
                                 <span class="course-name">ریاضیات دبستان</span>
                                 <span class="course-price">۳۱۵k</span>
                             </div>
-                            <div class="course-type">普通</div>
+                            <div class="course-type">اول تا ششم</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                         <div class="course-item">
@@ -563,13 +562,12 @@
                                 <span class="course-name">نیازهای ویژه</span>
                                 <span class="course-price">۳۲۵k</span>
                             </div>
-                            <div class="course-type">ویژه</div>
+                            <div class="course-type">اول تا ششم</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- راهنمایی (متوسطه اول) -->
                 <div class="level-item">
                     <div class="level-title" onclick="toggleSubMenu('guidance')">
                         <span>📚 راهنمایی</span>
@@ -603,7 +601,6 @@
                     </div>
                 </div>
 
-                <!-- دبیرستان -->
                 <div class="level-item">
                     <div class="level-title" onclick="toggleSubMenu('highschool')">
                         <span>🏫 دبیرستان</span>
@@ -615,7 +612,7 @@
                                 <span class="course-name">حسابان</span>
                                 <span class="course-price">۳۵۰k</span>
                             </div>
-                            <div class="course-type">یازدهم - دوازدهم</div>
+                            <div class="course-type">دبیرستان</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                         <div class="course-item">
@@ -623,7 +620,7 @@
                                 <span class="course-name">هندسه</span>
                                 <span class="course-price">۳۵۰k</span>
                             </div>
-                            <div class="course-type">دهم - یازدهم</div>
+                            <div class="course-type">دبیرستان</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                         <div class="course-item">
@@ -631,7 +628,7 @@
                                 <span class="course-name">ریاضی دهم</span>
                                 <span class="course-price">۳۵۰k</span>
                             </div>
-                            <div class="course-type">دهم</div>
+                            <div class="course-type">دبیرستان</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                         <div class="course-item">
@@ -639,7 +636,7 @@
                                 <span class="course-name">آمار و احتمال</span>
                                 <span class="course-price">۳۳۵k</span>
                             </div>
-                            <div class="course-type">یازدهم</div>
+                            <div class="course-type">دبیرستان</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                     </div>
@@ -647,8 +644,28 @@
             </div>
         </div>
 
-        <!-- منوی اصلی سایر دوره‌ها -->
-        <div id="other-dropdown" class="main-dropdown">
+        <div id="general-dropdown" class="main-dropdown">
+            <div class="menu-level">
+                <div class="level-item">
+                    <div class="level-title" onclick="toggleSubMenu('arabic')">
+                        <span>📖 عربی</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="arabic-submenu" class="submenu">
+                        <div class="course-item">
+                            <div class="course-header">
+                                <span class="course-name">عربی دبیرستان</span>
+                                <span class="course-price">۲۳۰k</span>
+                            </div>
+                            <div class="course-type">دبیرستان</div>
+                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="computer-dropdown" class="main-dropdown">
             <div class="menu-level">
                 <div class="level-item">
                     <div class="level-title" onclick="toggleSubMenu('programming')">
@@ -662,23 +679,6 @@
                                 <span class="course-price">۴۰۰k</span>
                             </div>
                             <div class="course-type">مقدماتی تا پیشرفته</div>
-                            <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="level-item">
-                    <div class="level-title" onclick="toggleSubMenu('arabic')">
-                        <span>📖 عربی</span>
-                        <i>▼</i>
-                    </div>
-                    <div id="arabic-submenu" class="submenu">
-                        <div class="course-item">
-                            <div class="course-header">
-                                <span class="course-name">عربی دبیرستان</span>
-                                <span class="course-price">۲۳۰k</span>
-                            </div>
-                            <div class="course-type">متوسطه دوم</div>
                             <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
                         </div>
                     </div>
@@ -747,51 +747,47 @@
     </div>
 
     <script>
-        // باز و بسته کردن منوی اصلی
         function toggleMainDropdown(category) {
-            const mathDropdown = document.getElementById('math-dropdown');
-            const otherDropdown = document.getElementById('other-dropdown');
+            const specializedDropdown = document.getElementById('specialized-dropdown');
+            const generalDropdown = document.getElementById('general-dropdown');
+            const computerDropdown = document.getElementById('computer-dropdown');
             const categoryItems = document.querySelectorAll('.category-item');
             
-            // بستن همه منوها
-            mathDropdown.classList.remove('show');
-            otherDropdown.classList.remove('show');
+            specializedDropdown.classList.remove('show');
+            generalDropdown.classList.remove('show');
+            computerDropdown.classList.remove('show');
             
-            // غیرفعال کردن حالت active همه دکمه‌ها
             categoryItems.forEach(item => {
                 item.classList.remove('active');
             });
             
-            // باز کردن منوی انتخاب شده
-            if (category === 'math') {
-                mathDropdown.classList.add('show');
+            if (category === 'specialized') {
+                specializedDropdown.classList.add('show');
+                event.currentTarget.classList.add('active');
+            } else if (category === 'general') {
+                generalDropdown.classList.add('show');
                 event.currentTarget.classList.add('active');
             } else {
-                otherDropdown.classList.add('show');
+                computerDropdown.classList.add('show');
                 event.currentTarget.classList.add('active');
             }
             
-            // بستن همه زیرمنوها
             closeAllSubMenus();
         }
 
-        // باز و بسته کردن زیرمنوها
         function toggleSubMenu(submenuId) {
             const submenu = document.getElementById(submenuId + '-submenu');
             const allSubmenus = document.querySelectorAll('.submenu');
             
-            // بستن همه زیرمنوها به جز زیرمنوی انتخاب شده
             allSubmenus.forEach(menu => {
                 if (menu.id !== submenuId + '-submenu') {
                     menu.classList.remove('show');
                 }
             });
             
-            // باز یا بسته کردن زیرمنوی انتخاب شده
             submenu.classList.toggle('show');
         }
 
-        // بستن همه زیرمنوها
         function closeAllSubMenus() {
             const allSubmenus = document.querySelectorAll('.submenu');
             allSubmenus.forEach(menu => {
@@ -799,14 +795,14 @@
             });
         }
 
-        // بستن منوها با کلیک خارج
         document.addEventListener('click', function(event) {
             if (!event.target.closest('.category-item') && 
                 !event.target.closest('.main-dropdown') && 
                 !event.target.closest('.level-title')) {
                 
-                document.getElementById('math-dropdown').classList.remove('show');
-                document.getElementById('other-dropdown').classList.remove('show');
+                document.getElementById('specialized-dropdown').classList.remove('show');
+                document.getElementById('general-dropdown').classList.remove('show');
+                document.getElementById('computer-dropdown').classList.remove('show');
                 document.querySelectorAll('.category-item').forEach(item => {
                     item.classList.remove('active');
                 });
