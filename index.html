@@ -395,6 +395,51 @@
             font-size: 1.3rem;
         }
 
+        .special-gift {
+            background: linear-gradient(145deg, #4a3500, #3a2500);
+            border: 2px solid #ffd700;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px 0 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-gift::before {
+            content: "🎁";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 5rem;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .gift-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .gift-description {
+            font-size: 1.3rem;
+            color: #ffb347;
+            line-height: 1.8;
+        }
+
+        .gift-highlight {
+            color: #ffd700;
+            font-weight: 900;
+            font-size: 1.5rem;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
         .offer-message {
             font-size: 1.8rem;
             font-weight: 900;
@@ -564,6 +609,18 @@
                 font-size: 1rem;
                 padding: 10px 15px;
             }
+
+            .gift-title {
+                font-size: 1.5rem;
+            }
+
+            .gift-description {
+                font-size: 1.1rem;
+            }
+
+            .gift-highlight {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -603,6 +660,7 @@
 
         <div id="specialized-dropdown" class="main-dropdown">
             <div class="menu-level-1">
+                <!-- ریاضیات -->
                 <div class="level-1-item">
                     <div class="level-1-title" onclick="toggleLevel2('math-levels', this)">
                         <span>📐 ریاضیات</span>
@@ -707,6 +765,96 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- علوم تجربی -->
+                <div class="level-1-item">
+                    <div class="level-1-title" onclick="toggleLevel2('science-levels', this)">
+                        <span>🔬 علوم تجربی</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="science-levels" class="menu-level-2">
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('primary-science', this)">
+                                <span>🔢 دبستان</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="primary-science" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">تستی</span>
+                                        <span class="course-price">۲۷۰k</span>
+                                    </div>
+                                    <div class="course-type">اول تا ششم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">تشریحی</span>
+                                        <span class="course-price">۲۲۰k</span>
+                                    </div>
+                                    <div class="course-type">اول تا ششم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('guidance-science', this)">
+                                <span>📚 راهنمایی</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="guidance-science" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">تستی</span>
+                                        <span class="course-price">۲۵۵k</span>
+                                    </div>
+                                    <div class="course-type">هفتم - هشتم - نهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">تشریحی</span>
+                                        <span class="course-price">۲۳۵k</span>
+                                    </div>
+                                    <div class="course-type">هفتم - هشتم - نهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">نمونه دولتی + تیزهوشان</span>
+                                        <span class="course-price">۲۷۵k</span>
+                                    </div>
+                                    <div class="course-type">هفتم - هشتم - نهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('highschool-science', this)">
+                                <span>🏫 دبیرستان</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="highschool-science" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">فیزیک</span>
+                                        <span class="course-price">۳۳۵k</span>
+                                    </div>
+                                    <div class="course-type">دبیرستان</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">شیمی</span>
+                                        <span class="course-price">۳۳۵k</span>
+                                    </div>
+                                    <div class="course-type">دبیرستان</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -795,6 +943,15 @@
                 <div class="check-item">
                     <div class="check-icon">❓</div>
                     <div class="check-text"><span class="highlight">آیا این اولین جلسه شماست؟</span></div>
+                </div>
+            </div>
+
+            <div class="special-gift">
+                <div class="gift-title">🎁 هدیه ویژه معرفی دانش‌پذیر جدید 🎁</div>
+                <div class="gift-description">
+                    در صورتی که دانش‌پذیر جدیدی که از طرف شما معرفی شده است ثبت نام کند،
+                    <div class="gift-highlight">۲ جلسه رایگان</div>
+                    به شما هدیه داده می‌شود!
                 </div>
             </div>
 
