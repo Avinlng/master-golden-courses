@@ -183,6 +183,11 @@
         .level-1-title i {
             margin-left: 10px;
             font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .level-1-title.active i {
+            transform: rotate(180deg);
         }
 
         .menu-level-2 {
@@ -225,6 +230,11 @@
         .level-2-title i {
             margin-left: 8px;
             font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .level-2-title.active i {
+            transform: rotate(180deg);
         }
 
         .menu-level-3 {
@@ -585,13 +595,13 @@
         <div id="specialized-dropdown" class="main-dropdown">
             <div class="menu-level-1">
                 <div class="level-1-item">
-                    <div class="level-1-title" onclick="toggleLevel2('math-levels')">
+                    <div class="level-1-title" onclick="toggleLevel2('math-levels', this)">
                         <span>📐 ریاضیات</span>
                         <i>▼</i>
                     </div>
                     <div id="math-levels" class="menu-level-2">
                         <div class="level-2-item">
-                            <div class="level-2-title" onclick="toggleLevel3('primary-math')">
+                            <div class="level-2-title" onclick="toggleLevel3('primary-math', this)">
                                 <span>🔢 دبستان</span>
                                 <i>▼</i>
                             </div>
@@ -615,7 +625,7 @@
                             </div>
                         </div>
                         <div class="level-2-item">
-                            <div class="level-2-title" onclick="toggleLevel3('guidance-math')">
+                            <div class="level-2-title" onclick="toggleLevel3('guidance-math', this)">
                                 <span>📚 راهنمایی</span>
                                 <i>▼</i>
                             </div>
@@ -647,7 +657,7 @@
                             </div>
                         </div>
                         <div class="level-2-item">
-                            <div class="level-2-title" onclick="toggleLevel3('highschool-math')">
+                            <div class="level-2-title" onclick="toggleLevel3('highschool-math', this)">
                                 <span>🏫 دبیرستان</span>
                                 <i>▼</i>
                             </div>
@@ -694,13 +704,13 @@
         <div id="general-dropdown" class="main-dropdown">
             <div class="menu-level-1">
                 <div class="level-1-item">
-                    <div class="level-1-title" onclick="toggleLevel2('arabic-levels')">
+                    <div class="level-1-title" onclick="toggleLevel2('arabic-levels', this)">
                         <span>📖 عربی</span>
                         <i>▼</i>
                     </div>
                     <div id="arabic-levels" class="menu-level-2">
                         <div class="level-2-item">
-                            <div class="level-2-title" onclick="toggleLevel3('highschool-arabic')">
+                            <div class="level-2-title" onclick="toggleLevel3('highschool-arabic', this)">
                                 <span>🏫 دبیرستان</span>
                                 <i>▼</i>
                             </div>
@@ -723,13 +733,13 @@
         <div id="computer-dropdown" class="main-dropdown">
             <div class="menu-level-1">
                 <div class="level-1-item">
-                    <div class="level-1-title" onclick="toggleLevel2('programming-levels')">
+                    <div class="level-1-title" onclick="toggleLevel2('programming-levels', this)">
                         <span>💻 برنامه‌نویسی</span>
                         <i>▼</i>
                     </div>
                     <div id="programming-levels" class="menu-level-2">
                         <div class="level-2-item">
-                            <div class="level-2-title" onclick="toggleLevel3('python-course')">
+                            <div class="level-2-title" onclick="toggleLevel3('python-course', this)">
                                 <span>🐍 پایتون</span>
                                 <i>▼</i>
                             </div>
@@ -816,54 +826,91 @@
             const computerDropdown = document.getElementById('computer-dropdown');
             const categoryItems = document.querySelectorAll('.category-item');
             
-            specializedDropdown.classList.remove('show');
-            generalDropdown.classList.remove('show');
-            computerDropdown.classList.remove('show');
-            
-            categoryItems.forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            if (category === 'specialized') {
-                specializedDropdown.classList.add('show');
-                event.currentTarget.classList.add('active');
-            } else if (category === 'general') {
-                generalDropdown.classList.add('show');
-                event.currentTarget.classList.add('active');
-            } else {
-                computerDropdown.classList.add('show');
-                event.currentTarget.classList.add('active');
-            }
-            
-            closeAllLevels();
-        }
-
-        function toggleLevel2(level2Id) {
-            const level2 = document.getElementById(level2Id);
-            const allLevel2 = document.querySelectorAll('.menu-level-2');
-            
-            allLevel2.forEach(menu => {
-                if (menu.id !== level2Id) {
-                    menu.classList.remove('show');
-                    const level3s = menu.querySelectorAll('.menu-level-3');
-                    level3s.forEach(level3 => level3.classList.remove('show'));
+            if (event.currentTarget.classList.contains('active')) {
+                if (category === 'specialized') {
+                    specializedDropdown.classList.remove('show');
+                } else if (category === 'general') {
+                    generalDropdown.classList.remove('show');
+                } else {
+                    computerDropdown.classList.remove('show');
                 }
-            });
-            
-            level2.classList.toggle('show');
+                event.currentTarget.classList.remove('active');
+                closeAllLevels();
+            } else {
+                specializedDropdown.classList.remove('show');
+                generalDropdown.classList.remove('show');
+                computerDropdown.classList.remove('show');
+                
+                categoryItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (category === 'specialized') {
+                    specializedDropdown.classList.add('show');
+                } else if (category === 'general') {
+                    generalDropdown.classList.add('show');
+                } else {
+                    computerDropdown.classList.add('show');
+                }
+                event.currentTarget.classList.add('active');
+                closeAllLevels();
+            }
         }
 
-        function toggleLevel3(level3Id) {
+        function toggleLevel2(level2Id, element) {
+            const level2 = document.getElementById(level2Id);
+            
+            if (element.classList.contains('active')) {
+                level2.classList.remove('show');
+                element.classList.remove('active');
+                const level3s = level2.querySelectorAll('.menu-level-3');
+                level3s.forEach(level3 => {
+                    level3.classList.remove('show');
+                    const level3Titles = level3.parentElement.querySelectorAll('.level-2-title');
+                    level3Titles.forEach(title => title.classList.remove('active'));
+                });
+            } else {
+                const parentLevel1 = element.closest('.level-1-item');
+                const allLevel2 = parentLevel1.querySelectorAll('.menu-level-2');
+                allLevel2.forEach(menu => menu.classList.remove('show'));
+                
+                const allLevel1Titles = parentLevel1.querySelectorAll('.level-1-title');
+                allLevel1Titles.forEach(title => title.classList.remove('active'));
+                
+                level2.classList.add('show');
+                element.classList.add('active');
+            }
+        }
+
+        function toggleLevel3(level3Id, element) {
             const level3 = document.getElementById(level3Id);
-            level3.classList.toggle('show');
+            
+            if (element.classList.contains('active')) {
+                level3.classList.remove('show');
+                element.classList.remove('active');
+            } else {
+                const parentLevel2 = element.closest('.level-2-item');
+                const allLevel3 = parentLevel2.querySelectorAll('.menu-level-3');
+                allLevel3.forEach(menu => menu.classList.remove('show'));
+                
+                const allLevel2Titles = parentLevel2.querySelectorAll('.level-2-title');
+                allLevel2Titles.forEach(title => title.classList.remove('active'));
+                
+                level3.classList.add('show');
+                element.classList.add('active');
+            }
         }
 
         function closeAllLevels() {
             const allLevel2 = document.querySelectorAll('.menu-level-2');
             const allLevel3 = document.querySelectorAll('.menu-level-3');
+            const allLevel1Titles = document.querySelectorAll('.level-1-title');
+            const allLevel2Titles = document.querySelectorAll('.level-2-title');
             
             allLevel2.forEach(menu => menu.classList.remove('show'));
             allLevel3.forEach(menu => menu.classList.remove('show'));
+            allLevel1Titles.forEach(title => title.classList.remove('active'));
+            allLevel2Titles.forEach(title => title.classList.remove('active'));
         }
 
         document.addEventListener('click', function(event) {
