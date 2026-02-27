@@ -231,25 +231,124 @@
         .offer-section {
             background: linear-gradient(135deg, #2a1a00, #1a0f00);
             border-radius: 30px;
-            padding: 30px;
+            padding: 40px 30px;
             margin: 40px 0;
-            border: 2px dashed #ffd700;
+            border: 3px solid #ffd700;
             text-align: center;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
         }
 
-        .offer-text {
-            font-size: 1.5rem;
-            color: #ffd700;
-            font-weight: 700;
+        .offer-section::before {
+            content: "🎁🎁🎁";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            font-size: 5rem;
+            opacity: 0.1;
+            transform: rotate(-5deg);
+            white-space: nowrap;
         }
 
-        .offer-percent {
-            font-size: 4rem;
+        .offer-title {
+            font-size: 2.2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            background: linear-gradient(135deg, #ffd700, #ff8c00, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin: 10px 0;
+            margin-bottom: 30px;
+            position: relative;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .offer-checklist {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            padding: 30px;
+            margin: 20px 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 15px 25px;
+            background: linear-gradient(145deg, #3a2500, #2a1a00);
+            border-radius: 50px;
+            border: 1px solid #ffd700;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            color: #ffb347;
+            text-align: right;
+        }
+
+        .check-item:hover {
+            transform: translateX(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            background: linear-gradient(145deg, #4a3500, #3a2500);
+        }
+
+        .check-icon {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a0f00;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .check-text {
+            line-height: 1.6;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        .offer-message {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffd700;
+            margin: 30px 0 20px;
+            text-shadow: 0 0 15px #ff8c00;
+        }
+
+        .offer-contact {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #1a0f00;
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 20px 40px;
+            border-radius: 100px;
+            display: inline-block;
+            margin: 20px 0;
+            direction: ltr;
+            border: 3px solid white;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); box-shadow: 0 20px 60px rgba(255, 215, 0, 0.8); }
+            100% { transform: scale(1); }
+        }
+
+        .offer-footer {
+            font-size: 1.3rem;
+            color: #ffb347;
+            margin-top: 20px;
         }
 
         .stats {
@@ -362,6 +461,20 @@
                 font-size: 0.9rem;
                 padding: 5px 10px;
             }
+
+            .offer-title {
+                font-size: 1.8rem;
+            }
+
+            .offer-contact {
+                font-size: 1.5rem;
+                padding: 15px 30px;
+            }
+
+            .check-item {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
         }
     </style>
 </head>
@@ -453,10 +566,42 @@
         </div>
 
         <div class="offer-section">
-            <div class="offer-text">✨ پیشنهاد ویژه آکادمی آوین ✨</div>
-            <div class="offer-percent">۱۰٪ تخفیف</div>
-            <div class="offer-text">برای رزرو ۵ جلسه یا بیشتر</div>
-            <button class="avin-btn" style="margin-top: 20px;" onclick="alert('کد تخفیف آوین: AVIN10')">دریافت کد تخفیف</button>
+            <div class="offer-title">🎁 پیشنهاد ویژه آکادمی آوین 🎁</div>
+            
+            <div class="offer-checklist">
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><span class="highlight">آیا دو فرزند دارید؟</span> (خواهر یا برادر)</div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><span class="highlight">می‌خواهید ۳ جلسه یا بیشتر</span> رزرو کنید؟</div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><span class="highlight">در قرعه‌کشی ماهانه</span> برنده شده‌اید؟</div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="check-icon">✅</div>
+                    <div class="check-text"><span class="highlight">۲ دوره آموزشی یا بیشتر</span> ثبت نام می‌کنید؟</div>
+                </div>
+            </div>
+
+            <div class="offer-message">
+                ✨ حتی اگر فقط یکی از موارد بالا برای شما صدق میکند ✨
+            </div>
+
+            <div class="offer-contact">
+                📱 ۰۹۱۷۴۱۲۳۴۲۸
+            </div>
+
+            <div class="offer-footer">
+                <span style="font-size: 2rem;">👇</span><br>
+                پیام دهید تا <span style="color: #ffd700; font-weight: 900; font-size: 1.5rem;">کد تخفیف ویژه</span> برایتان ارسال شود!
+            </div>
         </div>
 
         <div class="contact-info">
