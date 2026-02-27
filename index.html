@@ -398,46 +398,61 @@
         .special-gift {
             background: linear-gradient(145deg, #4a3500, #3a2500);
             border: 2px solid #ffd700;
-            border-radius: 20px;
-            padding: 20px;
+            border-radius: 30px;
+            padding: 30px 25px;
             margin: 30px 0 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
         }
 
         .special-gift::before {
-            content: "🎁";
+            content: "👥🎁";
             position: absolute;
-            top: -10px;
-            right: -10px;
-            font-size: 5rem;
-            opacity: 0.1;
-            transform: rotate(15deg);
+            top: -20px;
+            right: -20px;
+            font-size: 8rem;
+            opacity: 0.08;
+            transform: rotate(-10deg);
+            white-space: nowrap;
         }
 
         .gift-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 900;
-            color: #ffd700;
-            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            position: relative;
         }
 
         .gift-description {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: #ffb347;
-            line-height: 1.8;
+            line-height: 2;
+            position: relative;
         }
 
         .gift-highlight {
             color: #ffd700;
             font-weight: 900;
-            font-size: 1.5rem;
-            background: rgba(0,0,0,0.3);
-            padding: 5px 15px;
-            border-radius: 50px;
+            font-size: 1.8rem;
+            background: linear-gradient(145deg, #2a1a00, #1a0f00);
+            padding: 10px 30px;
+            border-radius: 60px;
             display: inline-block;
-            margin: 10px 0;
+            margin: 15px 0 10px;
+            border: 2px solid #ffd700;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .gift-note {
+            font-size: 1.2rem;
+            color: #ffb347;
+            margin-top: 20px;
+            font-style: italic;
         }
 
         .offer-message {
@@ -611,15 +626,20 @@
             }
 
             .gift-title {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
 
             .gift-description {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .gift-highlight {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
+                padding: 8px 20px;
+            }
+
+            .gift-note {
+                font-size: 1rem;
             }
         }
     </style>
@@ -947,11 +967,16 @@
             </div>
 
             <div class="special-gift">
-                <div class="gift-title">🎁 هدیه ویژه معرفی دانش‌پذیر جدید 🎁</div>
+                <div class="gift-title">✨ هدیه همراهان وفادار آوین ✨</div>
                 <div class="gift-description">
-                    در صورتی که دانش‌پذیر جدیدی که از طرف شما معرفی شده است ثبت نام کند،
-                    <div class="gift-highlight">۲ جلسه رایگان</div>
-                    به شما هدیه داده می‌شود!
+                    اگر دوست یا آشنای شما پس از معرفی شما،  
+                    <span class="gift-highlight">۳ جلسه</span>  
+                    در کلاس‌های ما ثبت نام کند،  
+                    <div class="gift-highlight">۲ جلسه رایگان</div>  
+                    به عنوان هدیه تقدیم شما خواهد شد.
+                </div>
+                <div class="gift-note">
+                    💫 این تقدیر کوچکی است از اعتمادی که به ما دارید 💫
                 </div>
             </div>
 
