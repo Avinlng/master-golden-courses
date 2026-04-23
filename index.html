@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آکادمی آوین | آموزش خصوصی بین‌المللی</title>
+    <title>آکادمی آوین | آموزش خصوصی</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
         
@@ -645,301 +645,64 @@
     </style>
 </head>
 <body>
-<div class="avin-container">
-    <div class="header">
-        <div class="logo">آکادمی آوین</div>
-        <div class="logo-sub">✨ Avin Academy ✨</div>
-        <div class="subtitle">آموزش خصوصی درجه یک</div>
-    </div>
+    <div class="avin-container">
+        <div class="header">
+            <div class="logo">آکادمی آوین</div>
+            <div class="logo-sub">✨ Avin Academy ✨</div>
+            <div class="subtitle">آموزش خصوصی درجه یک</div>
+        </div>
 
-    <div class="stats">
-        <div class="stat-item">
-            <div class="stat-number">۹۸٪</div>
-            <div class="stat-label">رضایت دانش‌آموزان</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">۲۰۰+</div>
-            <div class="stat-label">دانش‌آموز موفق</div>
-        </div>
-    </div>
-
-    <div class="categories">
-        <div class="category-item" onclick="toggleMainDropdown('specialized')">
-            <span>📐 دروس اختصاصی</span>
-            <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="category-item" onclick="toggleMainDropdown('general')">
-            <span>📚 دروس عمومی</span>
-            <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="category-item" onclick="toggleMainDropdown('computer')">
-            <span>💻 کامپیوتر</span>
-            <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="category-item" onclick="toggleMainDropdown('english')">
-            <span>🇺🇸🇨🇦 آموزش انگلیسی</span>
-            <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="category-item" onclick="toggleMainDropdown('iranSchoolEnglish')">
-            <span>🌍 دروس مدارس ایران به انگلیسی</span>
-            <span class="dropdown-icon">▼</span>
-        </div>
-        <div class="category-item" onclick="toggleMainDropdown('canada')">
-            <span>🍁 Canadian Curriculum (Ontario)</span>
-            <span class="dropdown-icon">▼</span>
-        </div>
-    </div>
-
-    <!-- ================= CANADA DROPDOWN - NATIVE ENGLISH ONTARIO CURRICULUM ================= -->
-    <div id="canada-dropdown" class="main-dropdown">
-        <div class="menu-level-1">
-            <!-- Kindergarten Section -->
-            <div class="level-1-item">
-                <div class="level-1-title" onclick="toggleLevel2('canadaKindergarten', this)">
-                    <span>🍁 Kindergarten (JK/SK)</span>
-                    <i>▼</i>
-                </div>
-                <div id="canadaKindergarten" class="menu-level-2">
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaKindergartenLanguage', this)">
-                            <span>📖 Language & Literacy</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaKindergartenLanguage" class="menu-level-3">
-                            <div class="course-item">
-                                <div class="course-header">
-                                    <span class="course-name">Oral Communication & Reading Foundations</span>
-                                    <span class="course-price">CAD $7</span>
-                                </div>
-                                <div class="course-type">Phonological awareness, vocabulary, storytelling, writing readiness</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaKindergartenMath', this)">
-                            <span>🔢 Mathematical Thinking</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaKindergartenMath" class="menu-level-3">
-                            <div class="course-item">
-                                <div class="course-header">
-                                    <span class="course-name">Number Sense & Spatial Reasoning</span>
-                                    <span class="course-price">CAD $8</span>
-                                </div>
-                                <div class="course-type">Counting, patterning, measurement, geometry</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaKindergartenDiscovery', this)">
-                            <span>🌎 Problem Solving & Inquiry</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaKindergartenDiscovery" class="menu-level-3">
-                            <div class="course-item">
-                                <div class="course-header">
-                                    <span class="course-name">STEAM Exploration</span>
-                                    <span class="course-price">CAD $8</span>
-                                </div>
-                                <div class="course-type">Hands-on science, building, creativity, and collaboration</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">۹۸٪</div>
+                <div class="stat-label">رضایت دانش‌آموزان</div>
             </div>
-
-            <!-- Elementary (Grades 1-6) based on Ontario Curriculum -->
-            <div class="level-1-item">
-                <div class="level-1-title" onclick="toggleLevel2('canadaElementary', this)">
-                    <span>📚 Elementary (Gr 1–6)</span>
-                    <i>▼</i>
-                </div>
-                <div id="canadaElementary" class="menu-level-2">
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaElemLanguage', this)">
-                            <span>📖 Language Arts (2023 Ontario Curriculum)</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaElemLanguage" class="menu-level-3">
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Strand A: Literacy Connections & Applications</span><span class="course-price">CAD $9</span></div>
-                                <div class="course-type">Transferable skills, digital media literacy, identity & community [citation:6]</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Strand B: Foundations of Language</span><span class="course-price">CAD $9</span></div>
-                                <div class="course-type">Oral language, word-level reading & spelling, vocabulary, fluency, comprehension [citation:6]</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Strand C: Comprehension (Reading)</span><span class="course-price">CAD $9</span></div>
-                                <div class="course-type">Understanding text forms, genres, critical analysis, diverse perspectives including First Nations, Métis, and Inuit cultures [citation:6]</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Strand D: Composition (Writing)</span><span class="course-price">CAD $9</span></div>
-                                <div class="course-type">Research, idea development, writing process, grammar, punctuation, cohesive ties</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaElemMath', this)">
-                            <span>📐 Mathematics (Strands)</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaElemMath" class="menu-level-3">
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Number Sense & Numeration</span><span class="course-price">CAD $10</span></div>
-                                <div class="course-type">Fractions, decimals, whole numbers, proportional reasoning</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Algebra & Coding</span><span class="course-price">CAD $10</span></div>
-                                <div class="course-type">Patterns, equations, inequalities, coding concepts (Scratch, Python basics)</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                            <div class="course-item">
-                                <div class="course-header"><span class="course-name">Data, Geometry & Spatial Sense</span><span class="course-price">CAD $10</span></div>
-                                <div class="course-type">Data visualization, probability, geometric properties, location & movement</div>
-                                <button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaElemScience', this)">
-                            <span>🔬 Science & Technology (Ontario)</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaElemScience" class="menu-level-3">
-                            <div class="course-item"><div class="course-header"><span class="course-name">Life Systems (Gr 1-6)</span><span class="course-price">CAD $9</span></div><div class="course-type">Needs of living things, growth, human organ systems, biodiversity [citation:8]</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Matter & Energy</span><span class="course-price">CAD $9</span></div><div class="course-type">Properties of liquids/solids, light/sound, electricity, conservation of energy</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Structures & Mechanisms</span><span class="course-price">CAD $9</span></div><div class="course-type">Strong structures, forces, pulleys/gears, flight</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Earth & Space Systems</span><span class="course-price">CAD $9</span></div><div class="course-type">Daily/seasonal changes, air/water, soils, space, climate</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Middle & High School (Grades 7-12) based on Ontario, BC, Manitoba curricula -->
-            <div class="level-1-item">
-                <div class="level-1-title" onclick="toggleLevel2('canadaSecondary', this)">
-                    <span>🏫 Secondary (Gr 7–12)</span>
-                    <i>▼</i>
-                </div>
-                <div id="canadaSecondary" class="menu-level-2">
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaEnglish', this)">
-                            <span>📖 English Language Arts</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaEnglish" class="menu-level-3">
-                            <div class="course-item"><div class="course-header"><span class="course-name">Grade 9 English (Academic/Applied)</span><span class="course-price">CAD $12</span></div><div class="course-type">Literary analysis, media studies, essay writing, oral communication</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Grade 10–12 English (University Prep)</span><span class="course-price">CAD $14</span></div><div class="course-type">Canadian literature, Shakespeare, comparative essays, presentations</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                        </div>
-                    </div>
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaMathSci', this)">
-                            <span>📐 Mathematics & Sciences</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaMathSci" class="menu-level-3">
-                            <div class="course-item"><div class="course-header"><span class="course-name">Mathematics (Gr 7–10)</span><span class="course-price">CAD $12</span></div><div class="course-type">Algebra, linear relations, geometry, measurement, data management</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Functions (MCR3U) / Pre-Calculus (MHF4U)</span><span class="course-price">CAD $15</span></div><div class="course-type">Advanced functions, trigonometry, calculus foundations (University prep)</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Science (SNC2D/Gr10 Academic)</span><span class="course-price">CAD $12</span></div><div class="course-type">Biology (tissues/organ systems), Chemistry (chemical reactions), Physics (light/motion), Earth Science [citation:4]</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Biology (SBI3U/SBI4U)</span><span class="course-price">CAD $14</span></div><div class="course-type">Genetics, evolution, animal anatomy & physiology, homeostasis, biodiversity</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Chemistry (SCH3U/SCH4U)</span><span class="course-price">CAD $14</span></div><div class="course-type">Matter/chemical bonding, gas laws, equilibrium, acids/bases, electrochemistry [citation:4]</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Physics (SPH3U/SPH4U)</span><span class="course-price">CAD $14</span></div><div class="course-type">Kinematics, forces, energy, waves/sound, electricity/magnetism, modern physics [citation:4]</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                        </div>
-                    </div>
-                    <div class="level-2-item">
-                        <div class="level-2-title" onclick="toggleLevel3('canadaSocial', this)">
-                            <span>🌍 Canadian Social Studies</span>
-                            <i>▼</i>
-                        </div>
-                        <div id="canadaSocial" class="menu-level-3">
-                            <div class="course-item"><div class="course-header"><span class="course-name">Geography (Gr 8/9)</span><span class="course-price">CAD $10</span></div><div class="course-type">Global settlement patterns, sustainability, natural resources</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Canadian History (Gr 10)</span><span class="course-price">CAD $10</span></div><div class="course-type">Confederation, WWI/WWII, Indigenous perspectives, modern Canada</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                            <div class="course-item"><div class="course-header"><span class="course-name">Civics & Careers (GLC2O/CHV2O)</span><span class="course-price">CAD $8</span></div><div class="course-type">Canadian government, civic engagement, career exploration, financial literacy</div><button class="reserve-small-btn" onclick="alert('Contact Avin Academy: 09174123428')">Book Now</button></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">۲۰۰+</div>
+                <div class="stat-label">دانش‌آموز موفق</div>
             </div>
         </div>
-    </div>
 
-    <!-- Simplified placeholders for other sections (identical to original for brevity) -->
-    <div id="specialized-dropdown" class="main-dropdown"><div class="menu-level-1"><div class="level-1-item"><div class="level-1-title">📐 ریاضیات</div><div class="course-item"><div class="course-header"><span class="course-name">ریاضیات دبستان تا دبیرستان</span><span class="course-price">۳۵۰k</span></div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div></div></div></div>
-    <div id="general-dropdown" class="main-dropdown"><div class="menu-level-1"><div class="level-1-item"><div class="level-1-title">📖 عربی و فارسی</div><div class="course-item"><div class="course-header"><span class="course-name">عربی/ادبیات فارسی</span><span class="course-price">۲۳۰k</span></div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div></div></div></div>
-    <div id="computer-dropdown" class="main-dropdown"><div class="menu-level-1"><div class="level-1-item"><div class="level-1-title">💻 برنامه‌نویسی</div><div class="course-item"><div class="course-header"><span class="course-name">پایتون حرفه‌ای / ICDL</span><span class="course-price">۴۰۰k</span></div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div></div></div></div>
-    <div id="english-dropdown" class="main-dropdown"><div class="menu-level-1"><div class="level-1-item"><div class="level-1-title">🇺🇸🇨🇦 زبان انگلیسی</div><div class="course-item"><div class="course-header"><span class="course-name">مکالمه / گرامر / آمادگی آزمون</span><span class="course-price">۳۱۵k</span></div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div></div></div></div>
-    <div id="iranSchoolEnglish-dropdown" class="main-dropdown"><div class="menu-level-1"><div class="level-1-item"><div class="level-1-title">📚 مدارس ایران به انگلیسی</div><div class="course-item"><div class="course-header"><span class="course-name">علوم، ریاضی، فیزیک، شیمی (هفتم تا دوازدهم)</span><span class="course-price">۴۵۰k</span></div><div class="course-type">teaching Iranian national curriculum in English</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div></div></div></div>
+        <div class="categories">
+            <div class="category-item" onclick="toggleMainDropdown('specialized')">
+                <span>📐 دروس اختصاصی</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('general')">
+                <span>📚 دروس عمومی</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('computer')">
+                <span>💻 کامپیوتر</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('english')">
+                <span>🇺🇸🇨🇦 آموزش انگلیسی (US & Canada)</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('iranSchoolSubjects')">
+                <span>🇮🇷 دروس مدارس ایران به زبان انگلیسی</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('canada')">
+                <span>🍁 Canadian School Subjects (K-12)</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+        </div>
 
-    <!-- OFFER SECTION (unchanged but essential) -->
-    <div class="offer-section">
-        <div class="offer-title">🎁 پیشنهاد ویژه آکادمی آوین 🎁</div>
-        <div class="offer-checklist"><div class="check-item"><div class="check-icon">✅</div><div class="check-text"><span class="highlight">آیا دو فرزند دارید؟</span> (خواهر یا برادر)</div></div>
-        <div class="check-item"><div class="check-icon">✅</div><div class="check-text"><span class="highlight">می‌خواهید ۳ جلسه یا بیشتر</span> رزرو کنید؟</div></div>
-        <div class="check-item"><div class="check-icon">✅</div><div class="check-text"><span class="highlight">در قرعه‌کشی ماهانه</span> برنده شده‌اید؟</div></div>
-        <div class="check-item"><div class="check-icon">✅</div><div class="check-text"><span class="highlight">۲ دوره آموزشی یا بیشتر</span> ثبت نام می‌کنید؟</div></div>
-        <div class="check-item"><div class="check-icon">❓</div><div class="check-text"><span class="highlight">آیا این اولین جلسه شماست؟</span></div></div></div>
-        <div class="special-gift"><div class="gift-title">✨ هدیه همراهان وفادار آوین ✨</div><div class="gift-description">اگر دوست یا آشنای شما پس از معرفی شما، <span class="gift-highlight">۳ جلسه</span> در کلاس‌های ما ثبت نام کند، <div class="gift-highlight">۲ جلسه رایگان</div> به عنوان هدیه تقدیم شما خواهد شد.</div><div class="gift-note">💫 این تقدیر کوچکی است از اعتمادی که به ما دارید 💫</div></div>
-        <div class="offer-message">✨ حتی اگر فقط یکی از موارد بالا برای شما صدق میکند ✨</div>
-        <a href="sms:09174123428?body=سلام%20من%20واجد%20شرایط%20تخفیف%20ویژه%20هستم." class="offer-contact">📱 ۰۹۱۷۴۱۲۳۴۲۸</a>
-        <div class="offer-footer"><span style="font-size: 2rem;">👇</span><br>با کلیک روی شماره، پیامک تخفیف ارسال می‌شود</div>
-    </div>
-
-    <div class="contact-info">
-        <a href="sms:09174123428" class="contact-item"><span>📱</span><span class="ltr">۰۹۱۷۴۱۲۳۴۲۸</span></a>
-        <a href="mailto:avinlangroodi4@gmail.com" class="contact-item"><span>📧</span><span class="ltr">avinlangroodi4@gmail.com</span></a>
-        <div class="contact-item"><span>⏰</span>۲۴ ساعته</div>
-    </div>
-    <div class="footer"><div>✨ با افتخار در خدمت شما هستیم ✨</div><div class="watermark">Avin Academy - Education with Passion</div></div>
-</div>
-
-<script>
-    function toggleMainDropdown(category) {
-        const ids = ['specialized-dropdown', 'general-dropdown', 'computer-dropdown', 'english-dropdown', 'iranSchoolEnglish-dropdown', 'canada-dropdown'];
-        const current = document.getElementById(category + '-dropdown');
-        const allActive = document.querySelectorAll('.category-item');
-        const isActive = event.currentTarget.classList.contains('active');
-        ids.forEach(id => document.getElementById(id).classList.remove('show'));
-        allActive.forEach(item => item.classList.remove('active'));
-        closeAllLevels();
-        if (!isActive && current) { current.classList.add('show'); event.currentTarget.classList.add('active'); }
-    }
-    function toggleLevel2(level2Id, element) {
-        const level2 = document.getElementById(level2Id);
-        if (element.classList.contains('active')) { level2.classList.remove('show'); element.classList.remove('active'); 
-            level2.querySelectorAll('.menu-level-3').forEach(l3 => l3.classList.remove('show'));
-            level2.querySelectorAll('.level-2-title').forEach(t => t.classList.remove('active'));
-        } else {
-            const parent = element.closest('.level-1-item');
-            parent.querySelectorAll('.menu-level-2').forEach(menu => menu.classList.remove('show'));
-            parent.querySelectorAll('.level-1-title').forEach(t => t.classList.remove('active'));
-            level2.classList.add('show'); element.classList.add('active');
-        }
-    }
-    function toggleLevel3(level3Id, element) {
-        const level3 = document.getElementById(level3Id);
-        if (element.classList.contains('active')) { level3.classList.remove('show'); element.classList.remove('active'); }
-        else {
-            const parent = element.closest('.level-2-item');
-            parent.querySelectorAll('.menu-level-3').forEach(menu => menu.classList.remove('show'));
-            parent.querySelectorAll('.level-2-title').forEach(t => t.classList.remove('active'));
-            level3.classList.add('show'); element.classList.add('active');
-        }
-    }
-    function closeAllLevels() { document.querySelectorAll('.menu-level-2, .menu-level-3').forEach(m => m.classList.remove('show')); document.querySelectorAll('.level-1-title, .level-2-title').forEach(t => t.classList.remove('active')); }
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.category-item') && !e.target.closest('.main-dropdown') && !e.target.closest('.level-1-title') && !e.target.closest('.level-2-title')) {
-            ['specialized-dropdown', 'general-dropdown', 'computer-dropdown', 'english-dropdown', 'iranSchoolEnglish-dropdown', 'canada-dropdown'].forEach(id => document.getElementById(id).classList.remove('show'));
-            document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active')); closeAllLevels();
-        }
-    });
-</script>
-</body>
-</html>
+        <div id="specialized-dropdown" class="main-dropdown">
+            <div class="menu-level-1">
+                <div class="level-1-item">
+                    <div class="level-1-title" onclick="toggleLevel2('math-levels', this)">
+                        <span>📐 ریاضیات</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="math-levels" class="menu-level-2">
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('primary-math', this)">
+                                <span>🔢 دبستان</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="primary-math" class="menu-level-3">
+                                <div class="course-item">
+                                    <div
