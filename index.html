@@ -676,11 +676,18 @@
                 <span>💻 کامپیوتر</span>
                 <span class="dropdown-icon">▼</span>
             </div>
+            <div class="category-item" onclick="toggleMainDropdown('english')">
+                <span>🇬🇧 آموزش انگلیسی</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
+            <div class="category-item" onclick="toggleMainDropdown('schoolSubjectsEnglish')">
+                <span>🌍 دروس مدرسه به زبان انگلیسی</span>
+                <span class="dropdown-icon">▼</span>
+            </div>
         </div>
 
         <div id="specialized-dropdown" class="main-dropdown">
             <div class="menu-level-1">
-                <!-- ریاضیات -->
                 <div class="level-1-item">
                     <div class="level-1-title" onclick="toggleLevel2('math-levels', this)">
                         <span>📐 ریاضیات</span>
@@ -786,7 +793,6 @@
                     </div>
                 </div>
 
-                <!-- علوم تجربی -->
                 <div class="level-1-item">
                     <div class="level-1-title" onclick="toggleLevel2('science-levels', this)">
                         <span>🔬 علوم تجربی</span>
@@ -880,7 +886,6 @@
 
         <div id="general-dropdown" class="main-dropdown">
             <div class="menu-level-1">
-                <!-- عربی -->
                 <div class="level-1-item">
                     <div class="level-1-title" onclick="toggleLevel2('arabic-levels', this)">
                         <span>📖 عربی</span>
@@ -906,7 +911,6 @@
                     </div>
                 </div>
 
-                <!-- ادبیات فارسی -->
                 <div class="level-1-item">
                     <div class="level-1-title" onclick="toggleLevel2('persian-levels', this)">
                         <span>📝 ادبیات فارسی</span>
@@ -1003,6 +1007,192 @@
             </div>
         </div>
 
+        <div id="english-dropdown" class="main-dropdown">
+            <div class="menu-level-1">
+                <div class="level-1-item">
+                    <div class="level-1-title" onclick="toggleLevel2('english-levels', this)">
+                        <span>🇬🇧 آموزش زبان انگلیسی</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="english-levels" class="menu-level-2">
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('guidance-english', this)">
+                                <span>📚 راهنمایی</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="guidance-english" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">زبان انگلیسی راهنمایی</span>
+                                        <span class="course-price">۲۱۰k</span>
+                                    </div>
+                                    <div class="course-type">هفتم - هشتم - نهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('highschool-english', this)">
+                                <span>🏫 دبیرستان</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="highschool-english" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">زبان انگلیسی دبیرستان</span>
+                                        <span class="course-price">۲۴۰k</span>
+                                    </div>
+                                    <div class="course-type">دبیرستان</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('konkur-english', this)">
+                                <span>📖 کنکور</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="konkur-english" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">زبان تخصصی کنکور</span>
+                                        <span class="course-price">۳۱۰k</span>
+                                    </div>
+                                    <div class="course-type">کنکور سراسری</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('language-class-english', this)">
+                                <span>🎓 کلاس زبان</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="language-class-english" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">کلاس زبان عمومی</span>
+                                        <span class="course-price">۳۱۵k</span>
+                                    </div>
+                                    <div class="course-type">مکالمه - آیلتس - تافل</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="schoolSubjectsEnglish-dropdown" class="main-dropdown">
+            <div class="menu-level-1">
+                <div class="level-1-item">
+                    <div class="level-1-title" onclick="toggleLevel2('elementaryEnglishSubjects', this)">
+                        <span>📚 دبستان (به زبان انگلیسی)</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="elementaryEnglishSubjects" class="menu-level-2">
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('scienceElementaryEnglish', this)">
+                                <span>🔬 علوم دبستان (به زبان انگلیسی)</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="scienceElementaryEnglish" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">علوم دبستان به زبان انگلیسی</span>
+                                        <span class="course-price">۳۱۵k</span>
+                                    </div>
+                                    <div class="course-type">اول تا ششم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('mathElementaryEnglish', this)">
+                                <span>📐 ریاضی دبستان (به زبان انگلیسی)</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="mathElementaryEnglish" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">ریاضی دبستان به زبان انگلیسی</span>
+                                        <span class="course-price">۳۵۰k</span>
+                                    </div>
+                                    <div class="course-type">اول تا ششم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-1-item">
+                    <div class="level-1-title" onclick="toggleLevel2('guidanceEnglishSubjects', this)">
+                        <span>📚 راهنمایی (به زبان انگلیسی)</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="guidanceEnglishSubjects" class="menu-level-2">
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('scienceGuidanceEnglish', this)">
+                                <span>🔬 علوم راهنمایی (به زبان انگلیسی)</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="scienceGuidanceEnglish" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">علوم راهنمایی به زبان انگلیسی</span>
+                                        <span class="course-price">۳۶۵k</span>
+                                    </div>
+                                    <div class="course-type">هفتم - هشتم - نهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('mathGuidanceEnglish', this)">
+                                <span>📐 ریاضی راهنمایی (به زبان انگلیسی)</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="mathGuidanceEnglish" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">ریاضی راهنمایی به زبان انگلیسی</span>
+                                        <span class="course-price">۴۱۰k</span>
+                                    </div>
+                                    <div class="course-type">هفتم - هشتم - نهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-1-item">
+                    <div class="level-1-title" onclick="toggleLevel2('highschoolEnglishSubjects', this)">
+                        <span>🏫 دبیرستان (کلیه دروس تخصصی به زبان انگلیسی)</span>
+                        <i>▼</i>
+                    </div>
+                    <div id="highschoolEnglishSubjects" class="menu-level-2">
+                        <div class="level-2-item">
+                            <div class="level-2-title" onclick="toggleLevel3('allSubjectsHighschoolEnglish', this)">
+                                <span>📖 کلیه دروس تخصصی دبیرستان (به زبان انگلیسی)</span>
+                                <i>▼</i>
+                            </div>
+                            <div id="allSubjectsHighschoolEnglish" class="menu-level-3">
+                                <div class="course-item">
+                                    <div class="course-header">
+                                        <span class="course-name">دروس تخصصی دبیرستان به زبان انگلیسی</span>
+                                        <span class="course-price">۴۵۰k</span>
+                                    </div>
+                                    <div class="course-type">دهم - یازدهم - دوازدهم</div>
+                                    <button class="reserve-small-btn" onclick="alert('شماره تماس آکادمی آوین: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="offer-section">
             <div class="offer-title">🎁 پیشنهاد ویژه آکادمی آوین 🎁</div>
             
@@ -1087,6 +1277,8 @@
             const specializedDropdown = document.getElementById('specialized-dropdown');
             const generalDropdown = document.getElementById('general-dropdown');
             const computerDropdown = document.getElementById('computer-dropdown');
+            const englishDropdown = document.getElementById('english-dropdown');
+            const schoolSubjectsEnglishDropdown = document.getElementById('schoolSubjectsEnglish-dropdown');
             const categoryItems = document.querySelectorAll('.category-item');
             
             if (event.currentTarget.classList.contains('active')) {
@@ -1094,8 +1286,12 @@
                     specializedDropdown.classList.remove('show');
                 } else if (category === 'general') {
                     generalDropdown.classList.remove('show');
-                } else {
+                } else if (category === 'computer') {
                     computerDropdown.classList.remove('show');
+                } else if (category === 'english') {
+                    englishDropdown.classList.remove('show');
+                } else if (category === 'schoolSubjectsEnglish') {
+                    schoolSubjectsEnglishDropdown.classList.remove('show');
                 }
                 event.currentTarget.classList.remove('active');
                 closeAllLevels();
@@ -1103,6 +1299,8 @@
                 specializedDropdown.classList.remove('show');
                 generalDropdown.classList.remove('show');
                 computerDropdown.classList.remove('show');
+                englishDropdown.classList.remove('show');
+                schoolSubjectsEnglishDropdown.classList.remove('show');
                 
                 categoryItems.forEach(item => {
                     item.classList.remove('active');
@@ -1112,8 +1310,12 @@
                     specializedDropdown.classList.add('show');
                 } else if (category === 'general') {
                     generalDropdown.classList.add('show');
-                } else {
+                } else if (category === 'computer') {
                     computerDropdown.classList.add('show');
+                } else if (category === 'english') {
+                    englishDropdown.classList.add('show');
+                } else if (category === 'schoolSubjectsEnglish') {
+                    schoolSubjectsEnglishDropdown.classList.add('show');
                 }
                 event.currentTarget.classList.add('active');
                 closeAllLevels();
@@ -1185,6 +1387,8 @@
                 document.getElementById('specialized-dropdown').classList.remove('show');
                 document.getElementById('general-dropdown').classList.remove('show');
                 document.getElementById('computer-dropdown').classList.remove('show');
+                document.getElementById('english-dropdown').classList.remove('show');
+                document.getElementById('schoolSubjectsEnglish-dropdown').classList.remove('show');
                 document.querySelectorAll('.category-item').forEach(item => {
                     item.classList.remove('active');
                 });
