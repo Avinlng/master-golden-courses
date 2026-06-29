@@ -83,83 +83,91 @@
             --toggle-bg: #2a1a00;
             --toggle-dot: #ffd700;
             --toggle-border: #ffd700;
+            --glow-color: rgba(255, 215, 0, 0.6);
+            --glow-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+            --body-bg-dark: #000000;
+            --body-bg-light: #1a0f00;
         }
 
-        /* Light Mode */
+        /* ===== Light Mode with Golden Glow ===== */
         [data-theme="light"] {
-            --bg-body: #f5f0e8;
-            --bg-container: rgba(255, 215, 0, 0.05);
-            --border-container: linear-gradient(45deg, #b8962a, #d4af37, #f6e27a, #b8962a);
+            --bg-body: #faf6ef;
+            --bg-container: rgba(255, 248, 235, 0.7);
+            --border-container: linear-gradient(45deg, #d4af37, #f6e27a, #d4af37, #b8962a);
             --text-logo: linear-gradient(135deg, #b8962a, #d4af37, #f6e27a, #b8962a);
             --text-sub: #b8962a;
             --text-subtitle: #b8962a;
-            --bg-category: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-category: #b8962a;
+            --bg-category: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-category: #d4af37;
             --text-category: #8a7a5a;
-            --bg-category-hover: linear-gradient(145deg, #f5ede0, #e8ddd0);
+            --bg-category-hover: linear-gradient(145deg, #ffffff, #f5ede0);
             --bg-category-active: linear-gradient(135deg, #d4af37, #b8962a);
             --text-category-active: #ffffff;
-            --bg-dropdown: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-dropdown: #b8962a;
-            --bg-level1: rgba(184, 150, 42, 0.1);
-            --border-level1: #b8962a;
+            --bg-dropdown: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-dropdown: #d4af37;
+            --bg-level1: rgba(212, 175, 55, 0.08);
+            --border-level1: #d4af37;
             --text-level1: #b8962a;
-            --bg-level2: rgba(0, 0, 0, 0.05);
+            --bg-level2: rgba(0, 0, 0, 0.03);
             --text-level2: #8a7a5a;
-            --bg-level2-title: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-level2-title: rgba(184, 150, 42, 0.3);
-            --bg-course: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-course: rgba(184, 150, 42, 0.3);
+            --bg-level2-title: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-level2-title: rgba(212, 175, 55, 0.25);
+            --bg-course: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-course: rgba(212, 175, 55, 0.2);
             --text-course: #b8962a;
             --text-price: #8a6a2a;
             --text-type: #8a7a5a;
             --btn-reserve: linear-gradient(135deg, #d4af37, #b8962a);
             --text-btn: #ffffff;
-            --bg-offer: linear-gradient(135deg, #f5ede0, #e8ddd0);
-            --border-offer: #b8962a;
+            --bg-offer: linear-gradient(135deg, #ffffff, #f5ede0);
+            --border-offer: #d4af37;
             --text-offer-title: linear-gradient(135deg, #b8962a, #d4af37, #f6e27a);
             --bg-check: linear-gradient(145deg, #ffffff, #f5ede0);
-            --border-check: #b8962a;
+            --border-check: #d4af37;
             --text-check: #8a7a5a;
-            --bg-gift: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-gift: #b8962a;
+            --bg-gift: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-gift: #d4af37;
             --text-gift-title: linear-gradient(135deg, #b8962a, #d4af37, #f6e27a);
             --text-gift-desc: #8a7a5a;
             --text-gift-highlight: #b8962a;
-            --bg-gift-highlight: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-gift-highlight: #b8962a;
+            --bg-gift-highlight: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-gift-highlight: #d4af37;
             --text-gift-note: #8a7a5a;
             --text-offer-message: #b8962a;
             --btn-offer: linear-gradient(135deg, #d4af37, #b8962a);
             --text-btn-offer: #ffffff;
             --border-btn-offer: #f6e27a;
             --text-offer-footer: #8a7a5a;
-            --bg-contact: linear-gradient(145deg, #f5ede0, #e8ddd0);
-            --border-contact: rgba(184, 150, 42, 0.3);
+            --bg-contact: linear-gradient(145deg, #ffffff, #f5ede0);
+            --border-contact: rgba(212, 175, 55, 0.2);
             --text-contact: #8a7a5a;
-            --bg-contact-hover: rgba(0, 0, 0, 0.05);
-            --border-contact-hover: #b8962a;
+            --bg-contact-hover: rgba(0, 0, 0, 0.03);
+            --border-contact-hover: #d4af37;
             --text-contact-hover: #b8962a;
             --text-footer: #8a7a5a;
-            --border-footer: rgba(184, 150, 42, 0.3);
+            --border-footer: rgba(212, 175, 55, 0.2);
             --text-watermark: rgba(184, 150, 42, 0.3);
-            --shadow-container: 0 0 50px rgba(184, 150, 42, 0.15);
-            --shadow-category: 0 5px 20px rgba(184, 150, 42, 0.1);
-            --shadow-category-hover: 0 15px 40px rgba(184, 150, 42, 0.15);
-            --shadow-category-active: 0 8px 30px rgba(184, 150, 42, 0.2);
-            --shadow-dropdown: 0 20px 60px rgba(184, 150, 42, 0.1);
-            --shadow-offer: 0 0 50px rgba(184, 150, 42, 0.1);
-            --shadow-gift: 0 10px 40px rgba(184, 150, 42, 0.1);
-            --shadow-btn-offer: 0 10px 40px rgba(184, 150, 42, 0.2);
-            --shadow-btn-offer-hover: 0 20px 60px rgba(184, 150, 42, 0.3);
-            --shadow-check-hover: 0 10px 30px rgba(184, 150, 42, 0.1);
-            --shadow-gift-highlight: 0 0 30px rgba(184, 150, 42, 0.1);
-            --shadow-level2: 0 5px 15px rgba(184, 150, 42, 0.1);
-            --shadow-course-hover: 0 5px 15px rgba(184, 150, 42, 0.1);
-            --shadow-contact-hover: 0 5px 15px rgba(184, 150, 42, 0.1);
-            --toggle-bg: #e8ddd0;
-            --toggle-dot: #b8962a;
-            --toggle-border: #b8962a;
+            --shadow-container: 0 0 60px rgba(212, 175, 55, 0.15), 0 0 120px rgba(212, 175, 55, 0.05);
+            --shadow-category: 0 5px 25px rgba(212, 175, 55, 0.1);
+            --shadow-category-hover: 0 15px 50px rgba(212, 175, 55, 0.2);
+            --shadow-category-active: 0 8px 35px rgba(212, 175, 55, 0.25);
+            --shadow-dropdown: 0 20px 60px rgba(212, 175, 55, 0.1);
+            --shadow-offer: 0 0 60px rgba(212, 175, 55, 0.1);
+            --shadow-gift: 0 10px 45px rgba(212, 175, 55, 0.1);
+            --shadow-btn-offer: 0 10px 45px rgba(212, 175, 55, 0.2);
+            --shadow-btn-offer-hover: 0 20px 70px rgba(212, 175, 55, 0.4);
+            --shadow-check-hover: 0 10px 35px rgba(212, 175, 55, 0.15);
+            --shadow-gift-highlight: 0 0 40px rgba(212, 175, 55, 0.15);
+            --shadow-level2: 0 5px 20px rgba(212, 175, 55, 0.08);
+            --shadow-course-hover: 0 5px 20px rgba(212, 175, 55, 0.1);
+            --shadow-contact-hover: 0 5px 20px rgba(212, 175, 55, 0.1);
+            --toggle-bg: #f5ede0;
+            --toggle-dot: #d4af37;
+            --toggle-border: #d4af37;
+            --glow-color: rgba(212, 175, 55, 0.5);
+            --glow-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+            --body-bg-dark: #faf6ef;
+            --body-bg-light: #f5ede0;
         }
 
         * {
@@ -178,7 +186,7 @@
             align-items: flex-start;
             padding: 20px;
             overflow-y: auto;
-            transition: background 0.4s ease;
+            transition: background 0.5s ease;
         }
 
         .avin-container {
@@ -192,7 +200,7 @@
             padding: 40px;
             box-shadow: var(--shadow-container);
             margin: 20px auto;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         /* ===== Theme Toggle Button ===== */
@@ -213,13 +221,13 @@
             display: flex;
             align-items: center;
             padding: 3px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             position: relative;
         }
 
         .theme-toggle:hover {
             border-color: var(--toggle-dot);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            box-shadow: var(--glow-shadow);
         }
 
         .theme-toggle .toggle-dot {
@@ -228,7 +236,7 @@
             border-radius: 50%;
             background: var(--toggle-dot);
             transition: all 0.4s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -255,14 +263,14 @@
             text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
             margin-bottom: 10px;
             letter-spacing: 2px;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         .logo-sub {
             font-size: 1.5rem;
             color: var(--text-sub);
             margin-bottom: 20px;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .subtitle {
@@ -270,7 +278,7 @@
             font-size: 1.2rem;
             position: relative;
             display: inline-block;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .subtitle::before,
@@ -305,17 +313,24 @@
             text-align: center;
         }
 
+        /* ===== Glow Effect on Click/Hover for Light Mode ===== */
         .category-item:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-category-hover);
+            box-shadow: var(--shadow-category-hover), var(--glow-shadow);
             background: var(--bg-category-hover);
+            border-color: var(--glow-color);
         }
 
         .category-item.active {
             background: var(--bg-category-active);
             color: var(--text-category-active);
             border-color: white;
-            box-shadow: var(--shadow-category-active);
+            box-shadow: var(--shadow-category-active), 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .category-item:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 60px rgba(212, 175, 55, 0.5);
         }
 
         .dropdown-icon {
@@ -337,7 +352,7 @@
             display: none;
             animation: slideDown 0.3s ease;
             box-shadow: var(--shadow-dropdown);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         @keyframes slideDown {
@@ -372,6 +387,11 @@
             transition: all 0.3s ease;
         }
 
+        .level-1-item:hover {
+            box-shadow: var(--glow-shadow);
+            border-color: var(--glow-color);
+        }
+
         .level-1-title {
             color: var(--text-level1);
             font-size: 1.3rem;
@@ -387,6 +407,7 @@
         .level-1-title:hover {
             transform: scale(1.05);
             color: var(--text-level1);
+            text-shadow: 0 0 20px var(--glow-color);
         }
 
         .level-1-title i {
@@ -415,6 +436,11 @@
             border-radius: 15px;
             padding: 10px;
             margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .level-2-item:hover {
+            box-shadow: var(--shadow-level2);
         }
 
         .level-2-title {
@@ -434,6 +460,7 @@
             transform: translateX(-5px);
             border-color: var(--border-category);
             color: var(--text-level1);
+            box-shadow: var(--glow-shadow);
         }
 
         .level-2-title i {
@@ -469,7 +496,12 @@
         .course-item:hover {
             transform: translateX(-5px);
             border-color: var(--border-category);
-            box-shadow: var(--shadow-course-hover);
+            box-shadow: var(--shadow-course-hover), var(--glow-shadow);
+        }
+
+        .course-item:active {
+            transform: scale(0.97);
+            box-shadow: 0 0 30px var(--glow-color);
         }
 
         .course-header {
@@ -516,7 +548,12 @@
 
         .reserve-small-btn:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 15px var(--border-category);
+            box-shadow: 0 0 25px var(--glow-color);
+        }
+
+        .reserve-small-btn:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 50px var(--glow-color);
         }
 
         .offer-section {
@@ -529,7 +566,11 @@
             box-shadow: var(--shadow-offer);
             position: relative;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
+        }
+
+        .offer-section:hover {
+            box-shadow: var(--shadow-offer), var(--glow-shadow);
         }
 
         .offer-section::before {
@@ -553,7 +594,7 @@
             margin-bottom: 30px;
             position: relative;
             text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         .offer-checklist {
@@ -562,7 +603,12 @@
             padding: 30px;
             margin: 20px 0;
             border: 2px solid rgba(255, 215, 0, 0.3);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
+        }
+
+        [data-theme="light"] .offer-checklist {
+            background: rgba(255, 248, 235, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
         }
 
         .check-item {
@@ -582,8 +628,14 @@
 
         .check-item:hover {
             transform: translateX(-10px) scale(1.02);
-            box-shadow: var(--shadow-check-hover);
+            box-shadow: var(--shadow-check-hover), var(--glow-shadow);
             background: var(--bg-check);
+            border-color: var(--glow-color);
+        }
+
+        .check-item:active {
+            transform: scale(0.97);
+            box-shadow: 0 0 40px var(--glow-color);
         }
 
         .check-icon {
@@ -620,7 +672,12 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-gift);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
+        }
+
+        .special-gift:hover {
+            box-shadow: var(--shadow-gift), var(--glow-shadow);
+            border-color: var(--glow-color);
         }
 
         .special-gift::before {
@@ -642,7 +699,7 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
             position: relative;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         .gift-description {
@@ -650,7 +707,7 @@
             color: var(--text-gift-desc);
             line-height: 2;
             position: relative;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .gift-highlight {
@@ -664,7 +721,11 @@
             margin: 15px 0 10px;
             border: 2px solid var(--border-gift-highlight);
             box-shadow: var(--shadow-gift-highlight);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
+        }
+
+        .gift-highlight:hover {
+            box-shadow: var(--shadow-gift-highlight), var(--glow-shadow);
         }
 
         .gift-note {
@@ -672,7 +733,7 @@
             color: var(--text-gift-note);
             margin-top: 20px;
             font-style: italic;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .offer-message {
@@ -681,7 +742,7 @@
             color: var(--text-offer-message);
             margin: 30px 0 20px;
             text-shadow: 0 0 15px #ff8c00;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .offer-contact {
@@ -704,7 +765,12 @@
 
         .offer-contact:hover {
             transform: scale(1.08);
-            box-shadow: var(--shadow-btn-offer-hover);
+            box-shadow: var(--shadow-btn-offer-hover), var(--glow-shadow);
+        }
+
+        .offer-contact:active {
+            transform: scale(0.95);
+            box-shadow: 0 0 70px var(--glow-color);
         }
 
         @keyframes pulse {
@@ -724,7 +790,7 @@
             font-size: 1.3rem;
             color: var(--text-offer-footer);
             margin-top: 20px;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .stats {
@@ -745,13 +811,13 @@
             background: var(--text-logo);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         .stat-label {
             color: var(--text-sub);
             font-size: 1rem;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         .contact-info {
@@ -764,7 +830,12 @@
             padding: 25px;
             border-radius: 50px;
             border: 1px solid var(--border-contact);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
+        }
+
+        .contact-info:hover {
+            box-shadow: var(--glow-shadow);
+            border-color: var(--glow-color);
         }
 
         .contact-item {
@@ -784,8 +855,12 @@
         .contact-item:hover {
             transform: translateY(-3px);
             border: 1px solid var(--border-contact-hover);
-            box-shadow: var(--shadow-contact-hover);
+            box-shadow: var(--shadow-contact-hover), var(--glow-shadow);
             color: var(--text-contact-hover);
+        }
+
+        .contact-item:active {
+            transform: scale(0.95);
         }
 
         .contact-item span {
@@ -804,14 +879,14 @@
             padding-top: 30px;
             border-top: 1px solid var(--border-footer);
             color: var(--text-footer);
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
         }
 
         .watermark {
             font-size: 0.9rem;
             color: var(--text-watermark);
             margin-top: 10px;
-            transition: color 0.4s ease;
+            transition: color 0.5s ease;
         }
 
         @media (max-width: 768px) {
