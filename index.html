@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>آکادمی آوین | برترین آموزشگاه خصوصی</title>
+    <title>آکادمی نورولرن | NeuroLearn Academy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <style>
@@ -17,28 +17,28 @@
         body {
             font-family: 'Vazirmatn', sans-serif;
             min-height: 100vh;
-            background: radial-gradient(circle at top right, #0d0d0d, #1a0e00);
+            background: radial-gradient(circle at top right, #0a0a12, #0f0a1a, #1a0e2e);
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
 
-        /* ----- Main Container (Glassmorphism) ----- */
+        /* ----- Main Container (Glassmorphism + Neuro Theme) ----- */
         .avin-container {
             max-width: 1280px;
             width: 100%;
-            background: rgba(20, 12, 0, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 215, 0, 0.25);
+            background: rgba(16, 12, 30, 0.7);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(120, 80, 255, 0.25);
             border-radius: 60px;
             padding: 45px 40px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 215, 0, 0.1) inset;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(120, 80, 255, 0.15) inset;
             transition: all 0.3s ease;
         }
 
-        /* ----- Header / Branding ----- */
+        /* ----- Header / Branding (NeuroLearn) ----- */
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -48,48 +48,57 @@
             font-size: 4.8rem;
             font-weight: 900;
             letter-spacing: 4px;
-            background: linear-gradient(135deg, #f9e05d, #f6a832, #f57c00);
+            background: linear-gradient(135deg, #a78bfa, #7c3aed, #6d28d9, #a78bfa);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 40px rgba(255, 180, 0, 0.3);
+            animation: gradientMove 4s ease-in-out infinite;
+            text-shadow: 0 0 60px rgba(124, 58, 237, 0.3);
             position: relative;
             display: inline-block;
         }
 
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .logo::after {
-            content: "✦";
-            font-size: 2.5rem;
-            color: #ffb347;
-            margin-right: 15px;
+            content: "🧠";
+            font-size: 2.8rem;
+            margin-right: 18px;
             -webkit-text-fill-color: initial;
-            opacity: 0.6;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.4));
         }
         .logo::before {
-            content: "✦";
-            font-size: 2.5rem;
-            color: #ffb347;
-            margin-left: 15px;
+            content: "🧠";
+            font-size: 2.8rem;
+            margin-left: 18px;
             -webkit-text-fill-color: initial;
-            opacity: 0.6;
+            opacity: 0.8;
+            filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.4));
         }
 
         .logo-sub {
-            font-size: 1.3rem;
-            color: #d4a373;
-            letter-spacing: 6px;
+            font-size: 1.4rem;
+            color: #a78bfa;
+            letter-spacing: 8px;
             font-weight: 300;
             margin-top: -10px;
+            text-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
         }
 
         .subtitle {
             font-size: 1.1rem;
-            color: #ffb347;
-            background: rgba(255, 215, 0, 0.08);
+            color: #c4b5fd;
+            background: rgba(124, 58, 237, 0.12);
             padding: 8px 30px;
             border-radius: 60px;
             display: inline-block;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(124, 58, 237, 0.2);
         }
 
         /* ----- Stats ----- */
@@ -108,13 +117,13 @@
         .stat-number {
             font-size: 2.8rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            background: linear-gradient(135deg, #a78bfa, #7c3aed);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .stat-label {
-            color: #d4a373;
+            color: #c4b5fd;
             font-size: 0.95rem;
             font-weight: 400;
         }
@@ -129,13 +138,13 @@
         }
 
         .category-item {
-            background: rgba(30, 18, 0, 0.8);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            background: rgba(30, 20, 50, 0.8);
+            border: 1px solid rgba(124, 58, 237, 0.3);
             border-radius: 100px;
             padding: 12px 30px;
             font-size: 1.1rem;
             font-weight: 700;
-            color: #f5d6a8;
+            color: #c4b5fd;
             cursor: pointer;
             transition: all 0.25s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -147,16 +156,16 @@
 
         .category-item:hover {
             transform: translateY(-4px);
-            border-color: #ffd700;
-            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.25);
-            background: rgba(50, 30, 0, 0.9);
+            border-color: #7c3aed;
+            box-shadow: 0 12px 30px rgba(124, 58, 237, 0.3);
+            background: rgba(50, 30, 80, 0.9);
         }
 
         .category-item.active {
-            background: linear-gradient(135deg, #ffd700, #f57c00);
-            color: #1a0e00;
-            border-color: #fff;
-            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: #ffffff;
+            border-color: #a78bfa;
+            box-shadow: 0 8px 30px rgba(124, 58, 237, 0.5);
         }
 
         .dropdown-icon {
@@ -169,9 +178,9 @@
 
         /* ----- Dropdowns (Menus) ----- */
         .main-dropdown {
-            background: rgba(20, 12, 0, 0.7);
+            background: rgba(16, 12, 30, 0.8);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(124, 58, 237, 0.2);
             border-radius: 40px;
             padding: 25px 20px;
             margin-top: 25px;
@@ -206,21 +215,21 @@
             background: rgba(0, 0, 0, 0.3);
             border-radius: 28px;
             padding: 18px 15px;
-            border: 1px solid rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.1);
             transition: all 0.3s;
         }
 
         .level-1-item:hover {
-            border-color: rgba(255, 215, 0, 0.3);
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .level-1-title {
-            color: #ffd700;
+            color: #a78bfa;
             font-size: 1.25rem;
             font-weight: 700;
             padding: 8px 12px;
             border-radius: 60px;
-            background: rgba(255, 215, 0, 0.05);
+            background: rgba(124, 58, 237, 0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -230,8 +239,8 @@
         }
 
         .level-1-title:hover {
-            background: rgba(255, 215, 0, 0.12);
-            border-color: rgba(255, 215, 0, 0.3);
+            background: rgba(124, 58, 237, 0.12);
+            border-color: rgba(124, 58, 237, 0.3);
         }
 
         .level-1-title i {
@@ -257,16 +266,16 @@
             border-radius: 18px;
             padding: 8px 10px;
             margin: 10px 0;
-            border: 1px solid rgba(255, 215, 0, 0.06);
+            border: 1px solid rgba(124, 58, 237, 0.06);
         }
 
         .level-2-title {
-            color: #f5d6a8;
+            color: #c4b5fd;
             font-weight: 700;
             font-size: 1rem;
             padding: 8px 12px;
             border-radius: 30px;
-            background: rgba(255, 215, 0, 0.04);
+            background: rgba(124, 58, 237, 0.04);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -275,7 +284,7 @@
         }
 
         .level-2-title:hover {
-            background: rgba(255, 215, 0, 0.1);
+            background: rgba(124, 58, 237, 0.1);
         }
         .level-2-title i {
             font-size: 0.7rem;
@@ -294,20 +303,20 @@
             display: block;
         }
 
-        /* ----- Course Cards ----- */
+        /* ----- Course Cards (Neuro Theme) ----- */
         .course-item {
-            background: linear-gradient(145deg, #1f1300, #2a1a04);
+            background: linear-gradient(145deg, #1a1028, #2a1a40);
             border-radius: 18px;
             padding: 14px 16px;
             margin: 10px 0;
-            border: 1px solid rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(124, 58, 237, 0.15);
             transition: all 0.25s ease;
         }
 
         .course-item:hover {
             transform: translateX(-5px);
-            border-color: #ffd700;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.15);
+            border-color: #7c3aed;
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.2);
         }
 
         .course-header {
@@ -320,60 +329,60 @@
 
         .course-name {
             font-weight: 700;
-            color: #fff3e0;
+            color: #e0d7f5;
             font-size: 0.95rem;
         }
 
         .course-price {
             font-weight: 900;
-            color: #ffb347;
+            color: #a78bfa;
             font-size: 1.05rem;
-            background: rgba(255, 215, 0, 0.1);
+            background: rgba(124, 58, 237, 0.1);
             padding: 2px 14px;
             border-radius: 40px;
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            border: 1px solid rgba(124, 58, 237, 0.2);
         }
 
         .course-type {
             font-size: 0.8rem;
-            color: #b8956a;
+            color: #8b7aaa;
             margin: 4px 0 10px;
         }
 
         .reserve-small-btn {
-            background: linear-gradient(135deg, #ffd700, #f57c00);
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
             border: none;
-            color: #1a0e00;
+            color: #ffffff;
             font-weight: 900;
             padding: 6px 18px;
             border-radius: 60px;
             font-size: 0.8rem;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(167, 139, 250, 0.3);
         }
 
         .reserve-small-btn:hover {
             transform: scale(1.03);
-            box-shadow: 0 8px 25px #ffd700;
+            box-shadow: 0 8px 30px #7c3aed;
         }
 
-        /* ----- Offer Section (Award Card) ----- */
+        /* ----- Offer Section (Neuro Gift Card) ----- */
         .offer-section {
             margin: 50px 0 30px;
-            background: linear-gradient(145deg, #1f1300, #0d0800);
+            background: linear-gradient(145deg, #1a1028, #0a0620);
             border-radius: 50px;
             padding: 40px 30px;
-            border: 2px solid rgba(255, 215, 0, 0.25);
+            border: 2px solid rgba(124, 58, 237, 0.25);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
             position: relative;
             overflow: hidden;
         }
 
         .offer-section::before {
-            content: "🎁";
+            content: "🧠";
             position: absolute;
             font-size: 14rem;
             left: -40px;
@@ -386,7 +395,7 @@
             font-size: 2.6rem;
             font-weight: 900;
             text-align: center;
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            background: linear-gradient(135deg, #a78bfa, #7c3aed, #4f46e5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 30px;
@@ -403,20 +412,20 @@
             background: rgba(0, 0, 0, 0.5);
             border-radius: 30px;
             padding: 18px 20px;
-            border: 1px solid rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(124, 58, 237, 0.15);
             display: flex;
             align-items: center;
             gap: 15px;
             transition: 0.3s;
             backdrop-filter: blur(4px);
-            color: #f5d6a8;
+            color: #c4b5fd;
             font-weight: 500;
         }
 
         .check-item:hover {
-            border-color: #ffd700;
+            border-color: #7c3aed;
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.1);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.15);
         }
 
         .check-icon {
@@ -425,49 +434,49 @@
         }
 
         .highlight {
-            color: #ffd700;
+            color: #a78bfa;
             font-weight: 900;
         }
 
         /* Gift Box */
         .special-gift {
-            background: linear-gradient(145deg, #2a1a04, #1a0e00);
-            border: 2px solid #ffd700;
+            background: linear-gradient(145deg, #2a1a40, #1a1028);
+            border: 2px solid #7c3aed;
             border-radius: 40px;
             padding: 35px 25px;
             text-align: center;
             margin: 25px 0;
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.1);
+            box-shadow: 0 0 50px rgba(124, 58, 237, 0.1);
         }
 
         .gift-title {
             font-size: 2rem;
             font-weight: 900;
-            color: #ffd700;
+            color: #a78bfa;
             margin-bottom: 15px;
         }
 
         .gift-description {
             font-size: 1.2rem;
-            color: #f5d6a8;
+            color: #c4b5fd;
             line-height: 2.2;
         }
 
         .gift-highlight {
             font-size: 1.8rem;
             font-weight: 900;
-            color: #ffb347;
+            color: #a78bfa;
             background: rgba(0, 0, 0, 0.6);
             padding: 5px 25px;
             border-radius: 60px;
             display: inline-block;
             margin: 10px 0;
-            border: 1px solid #ffd700;
+            border: 1px solid #7c3aed;
         }
 
         .gift-note {
             font-style: italic;
-            color: #b8956a;
+            color: #8b7aaa;
             margin-top: 20px;
         }
 
@@ -475,40 +484,40 @@
             text-align: center;
             font-size: 1.5rem;
             font-weight: 700;
-            color: #ffb347;
+            color: #a78bfa;
             margin: 25px 0 15px;
         }
 
         .offer-contact {
             display: inline-block;
-            background: linear-gradient(135deg, #ffd700, #f57c00);
-            color: #1a0e00;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: #ffffff;
             font-size: 2rem;
             font-weight: 900;
             padding: 18px 50px;
             border-radius: 100px;
             text-decoration: none;
-            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
             transition: all 0.3s;
-            border: 2px solid #fff;
+            border: 2px solid #a78bfa;
             text-align: center;
             margin: 10px auto;
             display: table;
-            animation: pulseGold 2.5s infinite;
+            animation: pulseNeuro 2.5s infinite;
         }
 
         .offer-contact:hover {
             transform: scale(1.06);
-            box-shadow: 0 20px 60px #ffd700;
+            box-shadow: 0 20px 60px #7c3aed;
         }
 
-        @keyframes pulseGold {
+        @keyframes pulseNeuro {
             0% {
                 transform: scale(1);
             }
             50% {
                 transform: scale(1.02);
-                box-shadow: 0 0 50px #ffd700;
+                box-shadow: 0 0 50px #7c3aed;
             }
             100% {
                 transform: scale(1);
@@ -517,7 +526,7 @@
 
         .offer-footer {
             text-align: center;
-            color: #b8956a;
+            color: #8b7aaa;
             margin-top: 15px;
         }
 
@@ -530,12 +539,12 @@
             background: rgba(0, 0, 0, 0.4);
             padding: 20px 30px;
             border-radius: 80px;
-            border: 1px solid rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.1);
             margin: 30px 0 20px;
         }
 
         .contact-item {
-            color: #f5d6a8;
+            color: #c4b5fd;
             font-size: 1.05rem;
             display: flex;
             align-items: center;
@@ -547,8 +556,8 @@
         }
 
         .contact-item:hover {
-            background: rgba(255, 215, 0, 0.08);
-            color: #ffd700;
+            background: rgba(124, 58, 237, 0.08);
+            color: #a78bfa;
         }
 
         .contact-item span:first-child {
@@ -565,8 +574,8 @@
             text-align: center;
             margin-top: 40px;
             padding-top: 25px;
-            border-top: 1px solid rgba(255, 215, 0, 0.08);
-            color: #b8956a;
+            border-top: 1px solid rgba(124, 58, 237, 0.08);
+            color: #8b7aaa;
         }
 
         .watermark {
@@ -586,7 +595,7 @@
             }
             .logo::before,
             .logo::after {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             .categories {
                 gap: 10px;
@@ -644,11 +653,11 @@
 <body>
     <div class="avin-container">
 
-        <!-- HEADER -->
+        <!-- HEADER - NeuroLearn Brand -->
         <div class="header">
-            <div class="logo">آکادمی آوین</div>
-            <div class="logo-sub">✦ Avin Academy ✦</div>
-            <div class="subtitle">آموزش خصوصی درجه یک</div>
+            <div class="logo">آکادمی نورولرن</div>
+            <div class="logo-sub">✦ NeuroLearn Academy ✦</div>
+            <div class="subtitle">آموزش با رویکرد علوم شناختی</div>
         </div>
 
         <!-- STATS -->
@@ -667,7 +676,7 @@
             <div class="category-item" onclick="toggleMainDropdown('canada')">🍁 Canadian K-12 <span class="dropdown-icon">▼</span></div>
         </div>
 
-        <!-- ===== DROPDOWNS ===== -->
+        <!-- ===== DROPDOWNS ===== (همه مطالب قبلی حفظ شده) ===== -->
 
         <!-- 1️⃣ دروس اختصاصی -->
         <div id="specialized-dropdown" class="main-dropdown">
@@ -945,9 +954,9 @@
             </div>
         </div>
 
-        <!-- ===== OFFER SECTION (Special Gift) ===== -->
+        <!-- ===== OFFER SECTION (Neuro Gift) ===== -->
         <div class="offer-section">
-            <div class="offer-title">🎁 پیشنهاد ویژه آکادمی آوین</div>
+            <div class="offer-title">🧠 پیشنهاد ویژه نورولرن</div>
 
             <div class="offer-checklist">
                 <div class="check-item"><span class="check-icon">✅</span> <span><span class="highlight">دو فرزند</span> (خواهر یا برادر)</span></div>
@@ -958,7 +967,7 @@
             </div>
 
             <div class="special-gift">
-                <div class="gift-title">✨ هدیه همراهان وفادار آوین ✨</div>
+                <div class="gift-title">✨ هدیه همراهان وفادار نورولرن ✨</div>
                 <div class="gift-description">
                     اگر دوست یا آشنای شما پس از معرفی شما،  
                     <span class="gift-highlight">۳ جلسه</span>  
@@ -991,13 +1000,13 @@
 
         <!-- ===== FOOTER ===== -->
         <div class="footer">
-            <div>✨ با افتخار در خدمت شما هستیم ✨</div>
-            <div class="watermark">Avin Academy — Education with Passion</div>
+            <div>🧠 با افتخار در خدمت شما هستیم 🧠</div>
+            <div class="watermark">NeuroLearn Academy — Science Meets Education</div>
         </div>
 
     </div>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ===== JAVASCRIPT (دست‌نخورده و کاملاً کاربردی) ===== -->
     <script>
         function toggleMainDropdown(category) {
             const dropdowns = {
@@ -1010,16 +1019,13 @@
             };
             const allItems = document.querySelectorAll('.category-item');
 
-            // close all
             Object.values(dropdowns).forEach(d => d.classList.remove('show'));
             allItems.forEach(item => item.classList.remove('active'));
             closeAllLevels();
 
-            // open target
             const target = dropdowns[category];
             if (target) {
                 target.classList.add('show');
-                // find the clicked button and add active class
                 const btns = document.querySelectorAll('.category-item');
                 btns.forEach(btn => {
                     if (btn.textContent.includes(category === 'specialized' ? 'اختصاصی' :
@@ -1038,7 +1044,6 @@
             const level2 = document.getElementById(level2Id);
             const isActive = element.classList.contains('active');
 
-            // close all siblings in same level-1
             const parent = element.closest('.level-1-item');
             parent.querySelectorAll('.menu-level-2').forEach(m => m.classList.remove('show'));
             parent.querySelectorAll('.level-1-title').forEach(t => t.classList.remove('active'));
@@ -1047,7 +1052,6 @@
                 level2.classList.add('show');
                 element.classList.add('active');
             }
-            // close all level3 inside this level2
             level2.querySelectorAll('.menu-level-3').forEach(l3 => l3.classList.remove('show'));
             level2.querySelectorAll('.level-2-title').forEach(t => t.classList.remove('active'));
         }
@@ -1071,7 +1075,6 @@
             document.querySelectorAll('.level-1-title, .level-2-title').forEach(el => el.classList.remove('active'));
         }
 
-        // Click outside to close everything
         document.addEventListener('click', function(e) {
             const container = document.querySelector('.avin-container');
             if (!container.contains(e.target)) {
