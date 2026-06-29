@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>آکادمی نورولرن | NeuroLearn Academy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;600;800&display=swap" rel="stylesheet" />
     <style>
+        /* ----- Reset ----- */
         * {
             margin: 0;
             padding: 0;
@@ -16,189 +17,176 @@
         body {
             font-family: 'Vazirmatn', sans-serif;
             min-height: 100vh;
-            background: #0a0806;
+            background: #0c0a08;
             background-image:
-                radial-gradient(ellipse at 20% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
-                linear-gradient(180deg, #0a0806 0%, #14100a 100%);
+                radial-gradient(ellipse at 30% 20%, rgba(212, 175, 55, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.025) 0%, transparent 50%);
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 30px;
         }
 
-        /* ----- Main Container (Luxury Gold/Black) ----- */
+        /* ----- Main Container (Light, Airy Glass) ----- */
         .neuro-container {
-            max-width: 1280px;
+            max-width: 1100px;
             width: 100%;
-            background: linear-gradient(145deg, rgba(20, 16, 10, 0.92), rgba(12, 10, 6, 0.96));
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            border-radius: 48px;
-            padding: 45px 40px;
+            background: rgba(18, 15, 12, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 56px;
+            padding: 50px 50px 40px;
+            border: 1px solid rgba(212, 175, 55, 0.08);
             box-shadow:
-                0 30px 80px rgba(0, 0, 0, 0.9),
-                0 0 0 1px rgba(212, 175, 55, 0.08) inset,
-                0 0 60px rgba(212, 175, 55, 0.03);
-            transition: all 0.3s ease;
+                0 40px 100px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(212, 175, 55, 0.03) inset;
+            transition: all 0.4s ease;
         }
 
-        /* ----- Header (Luxury Branding) ----- */
+        /* ----- Header (Minimal, Elegant) ----- */
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
+            padding: 0 10px;
         }
 
         .logo {
-            font-size: 4.6rem;
-            font-weight: 900;
-            letter-spacing: 3px;
-            background: linear-gradient(135deg, #f6e27a, #d4af37, #b8962a, #f6e27a);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: goldShimmer 5s ease-in-out infinite;
-            text-shadow: 0 0 80px rgba(212, 175, 55, 0.15);
+            font-size: 3.6rem;
+            font-weight: 200;
+            letter-spacing: 6px;
+            color: #f0e2c5;
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.06);
             position: relative;
             display: inline-block;
-        }
-
-        @keyframes goldShimmer {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            padding: 0 30px;
         }
 
         .logo::after {
             content: "✦";
-            font-size: 2.4rem;
+            font-size: 1.4rem;
             color: #d4af37;
-            margin-right: 20px;
-            -webkit-text-fill-color: initial;
-            opacity: 0.5;
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            opacity: 0.35;
+            margin-right: 18px;
+            font-weight: 300;
         }
         .logo::before {
             content: "✦";
-            font-size: 2.4rem;
+            font-size: 1.4rem;
             color: #d4af37;
-            margin-left: 20px;
-            -webkit-text-fill-color: initial;
-            opacity: 0.5;
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            opacity: 0.35;
+            margin-left: 18px;
+            font-weight: 300;
         }
 
         .logo-sub {
-            font-size: 1.3rem;
-            color: #b8962a;
-            letter-spacing: 10px;
+            font-size: 0.9rem;
+            color: #8a7a5a;
+            letter-spacing: 14px;
             font-weight: 300;
-            margin-top: -8px;
-            text-shadow: 0 0 40px rgba(212, 175, 55, 0.1);
+            margin-top: -2px;
         }
 
         .subtitle {
-            font-size: 1rem;
-            color: #d4af37;
-            background: rgba(212, 175, 55, 0.06);
-            padding: 6px 32px;
-            border-radius: 60px;
+            font-size: 0.85rem;
+            color: #b8962a;
+            background: rgba(212, 175, 55, 0.04);
+            padding: 4px 28px;
+            border-radius: 100px;
             display: inline-block;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(212, 175, 55, 0.12);
-            letter-spacing: 1px;
+            border: 1px solid rgba(212, 175, 55, 0.04);
+            letter-spacing: 2px;
+            font-weight: 300;
+            margin-top: 4px;
         }
 
-        /* ----- Stats (Gold accents) ----- */
+        /* ----- Stats (Ultra Minimal) ----- */
         .stats {
             display: flex;
             justify-content: center;
-            gap: 70px;
-            margin: 30px 0 40px;
+            gap: 80px;
+            margin: 20px 0 35px;
             flex-wrap: wrap;
         }
 
         .stat-number {
-            font-size: 2.8rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #f6e27a, #d4af37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.4rem;
+            font-weight: 200;
+            color: #d4af37;
+            letter-spacing: 2px;
         }
 
         .stat-label {
-            color: #b8962a;
-            font-size: 0.95rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            color: #6a5f4a;
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-top: 2px;
         }
 
-        /* ----- Category Tabs (Gold/Black Luxury) ----- */
+        .stat-item {
+            text-align: center;
+        }
+
+        /* ----- Category Tabs (Subtle, Refined) ----- */
         .categories {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 14px;
-            margin: 25px 0 10px;
+            gap: 8px;
+            margin: 20px 0 8px;
         }
 
         .category-item {
-            background: rgba(20, 16, 10, 0.8);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.06);
             border-radius: 100px;
-            padding: 12px 32px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #c9a84c;
+            padding: 8px 24px;
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #8a7a5a;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.35s ease;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            letter-spacing: 0.5px;
             backdrop-filter: blur(4px);
         }
 
         .category-item:hover {
-            transform: translateY(-3px);
-            border-color: #d4af37;
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.15);
-            background: rgba(30, 24, 16, 0.9);
+            border-color: rgba(212, 175, 55, 0.15);
+            color: #c9a84c;
+            transform: translateY(-1px);
         }
 
         .category-item.active {
-            background: linear-gradient(135deg, #d4af37, #b8962a);
-            color: #0a0806;
-            border-color: #f6e27a;
-            box-shadow: 0 8px 35px rgba(212, 175, 55, 0.35);
+            background: rgba(212, 175, 55, 0.06);
+            border-color: rgba(212, 175, 55, 0.15);
+            color: #d4af37;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.02);
         }
 
         .dropdown-icon {
-            font-size: 0.65rem;
+            font-size: 0.5rem;
+            opacity: 0.4;
             transition: transform 0.3s;
         }
         .category-item.active .dropdown-icon {
             transform: rotate(180deg);
+            opacity: 0.7;
         }
 
-        /* ----- Dropdowns (Luxury) ----- */
+        /* ----- Dropdowns (Light, Spacious) ----- */
         .main-dropdown {
-            background: rgba(12, 10, 6, 0.85);
+            background: rgba(12, 10, 8, 0.4);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(212, 175, 55, 0.12);
-            border-radius: 36px;
-            padding: 25px 20px;
-            margin-top: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.04);
+            border-radius: 32px;
+            padding: 30px 28px;
+            margin-top: 20px;
             display: none;
-            animation: fadeSlide 0.35s ease;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            animation: fadeSlide 0.4s ease;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
         }
 
         .main-dropdown.show {
@@ -208,7 +196,7 @@
         @keyframes fadeSlide {
             0% {
                 opacity: 0;
-                transform: translateY(-10px);
+                transform: translateY(-6px);
             }
             100% {
                 opacity: 1;
@@ -216,79 +204,81 @@
             }
         }
 
-        /* ----- Level 1 ----- */
+        /* ----- Level 1 (Airy Grid) ----- */
         .menu-level-1 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
         }
 
         .level-1-item {
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: 24px;
-            padding: 18px 16px;
-            border: 1px solid rgba(212, 175, 55, 0.06);
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 16px 14px;
+            border: 1px solid rgba(212, 175, 55, 0.02);
             transition: all 0.3s;
         }
 
         .level-1-item:hover {
-            border-color: rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.04);
         }
 
         .level-1-title {
-            color: #d4af37;
-            font-size: 1.2rem;
-            font-weight: 700;
-            padding: 8px 12px;
-            border-radius: 60px;
-            background: rgba(212, 175, 55, 0.04);
+            color: #c9a84c;
+            font-size: 1rem;
+            font-weight: 400;
+            padding: 6px 10px;
+            border-radius: 40px;
+            background: rgba(212, 175, 55, 0.02);
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
             transition: all 0.2s;
             border: 1px solid transparent;
+            letter-spacing: 0.5px;
         }
 
         .level-1-title:hover {
-            background: rgba(212, 175, 55, 0.08);
-            border-color: rgba(212, 175, 55, 0.15);
+            background: rgba(212, 175, 55, 0.04);
+            border-color: rgba(212, 175, 55, 0.04);
         }
 
         .level-1-title i {
-            font-size: 0.75rem;
+            font-size: 0.6rem;
             transition: transform 0.3s;
-            color: #b8962a;
+            color: #6a5f4a;
         }
         .level-1-title.active i {
             transform: rotate(180deg);
+            color: #b8962a;
         }
 
-        /* ----- Level 2 & 3 ----- */
+        /* ----- Level 2 & 3 (Clean) ----- */
         .menu-level-2 {
             display: none;
-            margin-top: 14px;
-            padding-right: 5px;
+            margin-top: 12px;
+            padding-right: 4px;
         }
         .menu-level-2.show {
             display: block;
         }
 
         .level-2-item {
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 16px;
-            padding: 8px 10px;
-            margin: 10px 0;
-            border: 1px solid rgba(212, 175, 55, 0.04);
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 6px 8px;
+            margin: 8px 0;
+            border: 1px solid rgba(212, 175, 55, 0.02);
         }
 
         .level-2-title {
-            color: #c9a84c;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 8px 12px;
+            color: #9a8a6a;
+            font-weight: 300;
+            font-size: 0.85rem;
+            padding: 6px 10px;
             border-radius: 30px;
-            background: rgba(212, 175, 55, 0.03);
+            background: rgba(212, 175, 55, 0.01);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -297,40 +287,41 @@
         }
 
         .level-2-title:hover {
-            background: rgba(212, 175, 55, 0.06);
+            background: rgba(212, 175, 55, 0.03);
+            color: #b8962a;
         }
         .level-2-title i {
-            font-size: 0.65rem;
+            font-size: 0.55rem;
             transition: transform 0.3s;
-            color: #b8962a;
+            color: #5a4f3a;
         }
         .level-2-title.active i {
             transform: rotate(180deg);
+            color: #b8962a;
         }
 
         .menu-level-3 {
             display: none;
-            margin-top: 12px;
-            padding-right: 10px;
+            margin-top: 10px;
+            padding-right: 8px;
         }
         .menu-level-3.show {
             display: block;
         }
 
-        /* ----- Course Cards (Luxury Gold) ----- */
+        /* ----- Course Cards (Minimal, Spacious) ----- */
         .course-item {
-            background: linear-gradient(145deg, #1a160e, #14100a);
-            border-radius: 16px;
-            padding: 14px 16px;
-            margin: 10px 0;
-            border: 1px solid rgba(212, 175, 55, 0.08);
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 14px;
+            padding: 12px 14px;
+            margin: 8px 0;
+            border: 1px solid rgba(212, 175, 55, 0.02);
             transition: all 0.3s ease;
         }
 
         .course-item:hover {
-            transform: translateX(-4px);
-            border-color: #d4af37;
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.08);
+            border-color: rgba(212, 175, 55, 0.04);
+            transform: translateX(-2px);
         }
 
         .course-header {
@@ -338,60 +329,63 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .course-name {
-            font-weight: 700;
-            color: #e8d5a8;
-            font-size: 0.95rem;
+            font-weight: 300;
+            color: #d4c8b0;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
         }
 
         .course-price {
-            font-weight: 900;
+            font-weight: 400;
             color: #d4af37;
-            font-size: 1rem;
-            background: rgba(212, 175, 55, 0.06);
-            padding: 2px 14px;
+            font-size: 0.85rem;
+            background: rgba(212, 175, 55, 0.03);
+            padding: 1px 12px;
             border-radius: 40px;
-            border: 1px solid rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212, 175, 55, 0.04);
         }
 
         .course-type {
-            font-size: 0.78rem;
-            color: #8a7a5a;
-            margin: 4px 0 10px;
+            font-size: 0.7rem;
+            color: #5a4f3a;
+            margin: 3px 0 8px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
         .reserve-small-btn {
-            background: linear-gradient(135deg, #d4af37, #b8962a);
-            border: none;
-            color: #0a0806;
-            font-weight: 900;
-            padding: 6px 18px;
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.06);
+            color: #b8962a;
+            font-weight: 300;
+            padding: 4px 14px;
             border-radius: 60px;
-            font-size: 0.78rem;
+            font-size: 0.7rem;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
             width: 100%;
-            border: 1px solid rgba(246, 226, 122, 0.2);
+            letter-spacing: 1px;
         }
 
         .reserve-small-btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
-            background: linear-gradient(135deg, #f6e27a, #d4af37);
+            background: rgba(212, 175, 55, 0.06);
+            border-color: rgba(212, 175, 55, 0.12);
+            transform: scale(1.01);
         }
 
-        /* ----- Offer Section (Luxury Gift) ----- */
+        /* ----- Offer Section (Luxury, Breathing) ----- */
         .offer-section {
-            margin: 50px 0 30px;
-            background: linear-gradient(145deg, #1a160e, #0e0c08);
-            border-radius: 48px;
-            padding: 40px 30px;
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+            margin: 45px 0 25px;
+            background: rgba(12, 10, 8, 0.3);
+            backdrop-filter: blur(4px);
+            border-radius: 40px;
+            padding: 40px 35px;
+            border: 1px solid rgba(212, 175, 55, 0.04);
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
@@ -399,186 +393,176 @@
         .offer-section::before {
             content: "✦";
             position: absolute;
-            font-size: 16rem;
-            left: -30px;
-            top: -30px;
-            opacity: 0.03;
-            transform: rotate(-10deg);
+            font-size: 12rem;
+            right: -30px;
+            bottom: -40px;
+            opacity: 0.015;
             color: #d4af37;
         }
 
         .offer-title {
-            font-size: 2.4rem;
-            font-weight: 900;
+            font-size: 1.8rem;
+            font-weight: 200;
             text-align: center;
-            background: linear-gradient(135deg, #f6e27a, #d4af37, #b8962a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 30px;
+            color: #d4af37;
+            margin-bottom: 28px;
+            letter-spacing: 6px;
         }
 
         .offer-checklist {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 14px;
-            margin: 20px 0 30px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin: 15px 0 25px;
         }
 
         .check-item {
-            background: rgba(0, 0, 0, 0.4);
-            border-radius: 30px;
-            padding: 16px 20px;
-            border: 1px solid rgba(212, 175, 55, 0.08);
+            background: rgba(0, 0, 0, 0.08);
+            border-radius: 20px;
+            padding: 14px 16px;
+            border: 1px solid rgba(212, 175, 55, 0.02);
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
             transition: 0.3s;
-            backdrop-filter: blur(4px);
-            color: #c9a84c;
-            font-weight: 500;
+            color: #8a7a5a;
+            font-weight: 300;
+            font-size: 0.85rem;
         }
 
         .check-item:hover {
-            border-color: #d4af37;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.06);
+            border-color: rgba(212, 175, 55, 0.04);
         }
 
         .check-icon {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             flex-shrink: 0;
+            opacity: 0.5;
         }
 
         .highlight {
-            color: #f6e27a;
-            font-weight: 900;
+            color: #d4af37;
+            font-weight: 400;
         }
 
-        /* Gift Box */
         .special-gift {
-            background: linear-gradient(145deg, #1a160e, #0e0c08);
-            border: 1px solid #d4af37;
-            border-radius: 36px;
-            padding: 35px 25px;
+            background: rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.03);
+            border-radius: 32px;
+            padding: 30px 25px;
             text-align: center;
-            margin: 25px 0;
-            box-shadow: 0 0 60px rgba(212, 175, 55, 0.04);
+            margin: 20px 0;
         }
 
         .gift-title {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: #d4af37;
-            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 200;
+            color: #c9a84c;
+            margin-bottom: 12px;
+            letter-spacing: 4px;
         }
 
         .gift-description {
-            font-size: 1.15rem;
-            color: #c9a84c;
+            font-size: 1rem;
+            color: #8a7a5a;
             line-height: 2.2;
+            font-weight: 300;
         }
 
         .gift-highlight {
-            font-size: 1.6rem;
-            font-weight: 900;
-            color: #f6e27a;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 4px 24px;
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #d4af37;
+            background: rgba(212, 175, 55, 0.02);
+            padding: 2px 20px;
             border-radius: 60px;
             display: inline-block;
-            margin: 10px 0;
-            border: 1px solid #d4af37;
+            margin: 8px 0;
+            border: 1px solid rgba(212, 175, 55, 0.03);
         }
 
         .gift-note {
             font-style: italic;
-            color: #8a7a5a;
-            margin-top: 20px;
+            color: #5a4f3a;
+            margin-top: 16px;
+            font-size: 0.8rem;
         }
 
         .offer-message {
             text-align: center;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #c9a84c;
-            margin: 25px 0 15px;
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #8a7a5a;
+            margin: 22px 0 14px;
+            letter-spacing: 2px;
         }
 
         .offer-contact {
             display: inline-block;
-            background: linear-gradient(135deg, #d4af37, #b8962a);
-            color: #0a0806;
-            font-size: 1.8rem;
-            font-weight: 900;
-            padding: 16px 48px;
+            background: rgba(212, 175, 55, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.06);
+            color: #d4af37;
+            font-size: 1.4rem;
+            font-weight: 300;
+            padding: 14px 44px;
             border-radius: 100px;
             text-decoration: none;
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
-            transition: all 0.3s;
-            border: 1px solid #f6e27a;
+            transition: all 0.4s;
             text-align: center;
-            margin: 10px auto;
+            margin: 8px auto;
             display: table;
-            animation: pulseGold 2.5s infinite;
+            letter-spacing: 4px;
         }
 
         .offer-contact:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
-        }
-
-        @keyframes pulseGold {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.02);
-                box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
-            }
-            100% {
-                transform: scale(1);
-            }
+            background: rgba(212, 175, 55, 0.04);
+            border-color: rgba(212, 175, 55, 0.08);
+            transform: scale(1.01);
         }
 
         .offer-footer {
             text-align: center;
-            color: #8a7a5a;
-            margin-top: 15px;
-            font-size: 0.95rem;
+            color: #4a3f2a;
+            margin-top: 12px;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 1px;
         }
 
-        /* ----- Contact Info (Luxury) ----- */
+        /* ----- Contact Info (Light) ----- */
         .contact-info {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px 40px;
-            background: rgba(0, 0, 0, 0.35);
-            padding: 18px 30px;
-            border-radius: 80px;
-            border: 1px solid rgba(212, 175, 55, 0.06);
-            margin: 30px 0 20px;
+            gap: 20px 50px;
+            background: rgba(0, 0, 0, 0.04);
+            padding: 14px 25px;
+            border-radius: 100px;
+            border: 1px solid rgba(212, 175, 55, 0.02);
+            margin: 25px 0 15px;
         }
 
         .contact-item {
-            color: #c9a84c;
-            font-size: 1rem;
+            color: #6a5f4a;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 10px;
             text-decoration: none;
             transition: 0.2s;
-            padding: 5px 15px;
+            padding: 4px 12px;
             border-radius: 40px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
         .contact-item:hover {
-            background: rgba(212, 175, 55, 0.04);
-            color: #f6e27a;
+            color: #b8962a;
         }
 
         .contact-item span:first-child {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            opacity: 0.4;
         }
 
         .ltr {
@@ -586,84 +570,120 @@
             unicode-bidi: embed;
         }
 
-        /* ----- Footer ----- */
+        /* ----- Footer (Minimal) ----- */
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(212, 175, 55, 0.06);
-            color: #8a7a5a;
-        }
-
-        .watermark {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(212, 175, 55, 0.02);
+            color: #4a3f2a;
             font-size: 0.8rem;
-            opacity: 0.35;
-            margin-top: 6px;
+            font-weight: 300;
             letter-spacing: 2px;
         }
 
-        /* ----- Responsive ----- */
+        .watermark {
+            font-size: 0.65rem;
+            opacity: 0.25;
+            margin-top: 4px;
+            letter-spacing: 4px;
+        }
+
+        /* ----- Responsive (Breathing on All Devices) ----- */
         @media (max-width: 768px) {
             .neuro-container {
-                padding: 25px 18px;
-                border-radius: 32px;
+                padding: 30px 20px 25px;
+                border-radius: 36px;
             }
             .logo {
-                font-size: 2.8rem;
+                font-size: 2.4rem;
+                letter-spacing: 4px;
             }
             .logo::before,
             .logo::after {
-                font-size: 1.6rem;
+                font-size: 1rem;
+                margin: 0 10px;
+            }
+            .logo-sub {
+                letter-spacing: 8px;
+                font-size: 0.75rem;
             }
             .categories {
-                gap: 10px;
+                gap: 6px;
             }
             .category-item {
-                font-size: 0.85rem;
-                padding: 8px 18px;
+                font-size: 0.75rem;
+                padding: 6px 16px;
             }
             .menu-level-1 {
                 grid-template-columns: 1fr;
+                gap: 14px;
             }
             .offer-title {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
+                letter-spacing: 4px;
             }
             .offer-contact {
-                font-size: 1.3rem;
-                padding: 14px 28px;
+                font-size: 1.1rem;
+                padding: 12px 30px;
+                letter-spacing: 2px;
             }
             .stats {
-                gap: 30px;
+                gap: 40px;
             }
             .stat-number {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             .contact-info {
                 flex-direction: column;
                 align-items: center;
                 border-radius: 40px;
-                gap: 12px;
+                gap: 10px;
+                padding: 16px 20px;
             }
             .gift-highlight {
-                font-size: 1.3rem;
-                padding: 4px 16px;
+                font-size: 1.1rem;
+                padding: 2px 14px;
+            }
+            .offer-section {
+                padding: 28px 18px;
+                border-radius: 28px;
+            }
+            .offer-checklist {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
         @media (max-width: 480px) {
+            .neuro-container {
+                padding: 20px 14px;
+                border-radius: 28px;
+            }
             .logo {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+                padding: 0 10px;
+            }
+            .logo::before,
+            .logo::after {
+                font-size: 0.8rem;
+                margin: 0 6px;
             }
             .category-item {
-                font-size: 0.75rem;
-                padding: 6px 12px;
+                font-size: 0.7rem;
+                padding: 4px 12px;
             }
             .course-header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .offer-section {
-                padding: 20px 15px;
+            .offer-checklist {
+                grid-template-columns: 1fr;
+            }
+            .offer-contact {
+                font-size: 1rem;
+                padding: 10px 24px;
+                letter-spacing: 1px;
             }
         }
     </style>
@@ -674,27 +694,27 @@
         <!-- HEADER -->
         <div class="header">
             <div class="logo">آکادمی نورولرن</div>
-            <div class="logo-sub">✦ NeuroLearn Academy ✦</div>
+            <div class="logo-sub">NeuroLearn Academy</div>
             <div class="subtitle">آموزش با رویکرد علوم شناختی</div>
         </div>
 
         <!-- STATS -->
         <div class="stats">
-            <div class="stat-item"><div class="stat-number">۹۸٪</div><div class="stat-label">رضایت دانش‌آموزان</div></div>
+            <div class="stat-item"><div class="stat-number">۹۸٪</div><div class="stat-label">رضایت</div></div>
             <div class="stat-item"><div class="stat-number">۲۰۰+</div><div class="stat-label">دانش‌آموز موفق</div></div>
         </div>
 
         <!-- CATEGORIES -->
         <div class="categories">
-            <div class="category-item" onclick="toggleMainDropdown('specialized')">📐 دروس اختصاصی <span class="dropdown-icon">▼</span></div>
-            <div class="category-item" onclick="toggleMainDropdown('general')">📚 دروس عمومی <span class="dropdown-icon">▼</span></div>
+            <div class="category-item" onclick="toggleMainDropdown('specialized')">📐 اختصاصی <span class="dropdown-icon">▼</span></div>
+            <div class="category-item" onclick="toggleMainDropdown('general')">📚 عمومی <span class="dropdown-icon">▼</span></div>
             <div class="category-item" onclick="toggleMainDropdown('computer')">💻 کامپیوتر <span class="dropdown-icon">▼</span></div>
-            <div class="category-item" onclick="toggleMainDropdown('english')">🇺🇸🇨🇦 آموزش انگلیسی <span class="dropdown-icon">▼</span></div>
-            <div class="category-item" onclick="toggleMainDropdown('iranSchoolSubjects')">📚 مدارس ایران (EN) <span class="dropdown-icon">▼</span></div>
+            <div class="category-item" onclick="toggleMainDropdown('english')">🇺🇸🇨🇦 انگلیسی <span class="dropdown-icon">▼</span></div>
+            <div class="category-item" onclick="toggleMainDropdown('iranSchoolSubjects')">📚 مدارس ایران <span class="dropdown-icon">▼</span></div>
             <div class="category-item" onclick="toggleMainDropdown('canada')">🍁 Canadian K-12 <span class="dropdown-icon">▼</span></div>
         </div>
 
-        <!-- ===== DROPDOWNS ===== -->
+        <!-- ===== DROPDOWNS (All content preserved, just cleaner markup) ===== -->
 
         <!-- 1️⃣ دروس اختصاصی -->
         <div id="specialized-dropdown" class="main-dropdown">
@@ -705,25 +725,25 @@
                         <div class="level-2-item">
                             <div class="level-2-title" onclick="toggleLevel3('primary-math', this)">🔢 دبستان <i>▼</i></div>
                             <div id="primary-math" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضیات دبستان</span><span class="course-price">۳۱۵k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">نیازهای ویژه</span><span class="course-price">۳۲۵k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضیات دبستان</span><span class="course-price">۳۱۵k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">نیازهای ویژه</span><span class="course-price">۳۲۵k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item">
                             <div class="level-2-title" onclick="toggleLevel3('guidance-math', this)">📚 راهنمایی <i>▼</i></div>
                             <div id="guidance-math" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۳۲۰k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۳۳۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">نمونه دولتی + تیزهوشان</span><span class="course-price">۳۸۰k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۳۲۰k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۳۳۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">نمونه دولتی + تیزهوشان</span><span class="course-price">۳۸۰k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item">
                             <div class="level-2-title" onclick="toggleLevel3('highschool-math', this)">🏫 دبیرستان <i>▼</i></div>
                             <div id="highschool-math" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">حسابان</span><span class="course-price">۳۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">هندسه</span><span class="course-price">۳۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضی دهم</span><span class="course-price">۳۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">آمار و احتمال</span><span class="course-price">۳۳۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">حسابان</span><span class="course-price">۳۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">هندسه</span><span class="course-price">۳۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضی دهم</span><span class="course-price">۳۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">آمار و احتمال</span><span class="course-price">۳۳۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -734,23 +754,23 @@
                         <div class="level-2-item">
                             <div class="level-2-title" onclick="toggleLevel3('primary-science', this)">🔢 دبستان <i>▼</i></div>
                             <div id="primary-science" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۲۷۰k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۲۲۰k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۲۷۰k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۲۲۰k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item">
                             <div class="level-2-title" onclick="toggleLevel3('guidance-science', this)">📚 راهنمایی <i>▼</i></div>
                             <div id="guidance-science" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۲۵۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۲۳۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">نمونه دولتی + تیزهوشان</span><span class="course-price">۲۷۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۲۵۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۲۳۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">نمونه دولتی + تیزهوشان</span><span class="course-price">۲۷۵k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item">
                             <div class="level-2-title" onclick="toggleLevel3('highschool-science', this)">🏫 دبیرستان <i>▼</i></div>
                             <div id="highschool-science" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">فیزیک</span><span class="course-price">۳۳۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">شیمی</span><span class="course-price">۳۳۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">فیزیک</span><span class="course-price">۳۳۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">شیمی</span><span class="course-price">۳۳۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -766,7 +786,7 @@
                     <div id="arabic-levels" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('highschool-arabic', this)">🏫 دبیرستان <i>▼</i></div>
                             <div id="highschool-arabic" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">عربی دبیرستان</span><span class="course-price">۲۳۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">عربی دبیرستان</span><span class="course-price">۲۳۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -776,18 +796,18 @@
                     <div id="persian-levels" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('primary-persian', this)">🔢 دبستان <i>▼</i></div>
                             <div id="primary-persian" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">ادبیات فارسی</span><span class="course-price">۲۱۰k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ادبیات فارسی</span><span class="course-price">۲۱۰k</span></div><div class="course-type">اول تا ششم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('guidance-persian', this)">📚 راهنمایی <i>▼</i></div>
                             <div id="guidance-persian" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">ادبیات فارسی</span><span class="course-price">۲۴۰k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ادبیات فارسی</span><span class="course-price">۲۴۰k</span></div><div class="course-type">هفتم - نهم</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('highschool-persian', this)">🏫 دبیرستان <i>▼</i></div>
                             <div id="highschool-persian" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۲۶۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
-                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۲۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تستی</span><span class="course-price">۲۶۵k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">تشریحی</span><span class="course-price">۲۵۰k</span></div><div class="course-type">دبیرستان</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -803,7 +823,7 @@
                     <div id="programming-levels" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('python-course', this)">🐍 پایتون <i>▼</i></div>
                             <div id="python-course" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">پایتون حرفه‌ای</span><span class="course-price">۴۰۰k</span></div><div class="course-type">مقدماتی تا پیشرفته</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">پایتون حرفه‌ای</span><span class="course-price">۴۰۰k</span></div><div class="course-type">مقدماتی تا پیشرفته</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -813,7 +833,7 @@
                     <div id="icdl-levels" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('icdl-course', this)">🖥️ مهارت‌های هفتگانه <i>▼</i></div>
                             <div id="icdl-course" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">ICDL کامل</span><span class="course-price">۳۵۰k</span></div><div class="course-type">ویندوز، ورد، اکسل، اکسس، پاورپوینت، اینترنت</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ICDL کامل</span><span class="course-price">۳۵۰k</span></div><div class="course-type">ویندوز، ورد، اکسل، اکسس، پاورپوینت، اینترنت</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -829,12 +849,12 @@
                     <div id="english-levels" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('konkur-english', this)">📖 کنکور <i>▼</i></div>
                             <div id="konkur-english" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">زبان تخصصی کنکور</span><span class="course-price">۳۱۰k</span></div><div class="course-type">کنکور سراسری</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">زبان تخصصی کنکور</span><span class="course-price">۳۱۰k</span></div><div class="course-type">کنکور سراسری</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('language-class-english', this)">🎓 کلاس عمومی <i>▼</i></div>
                             <div id="language-class-english" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">زبان عمومی</span><span class="course-price">۳۱۵k</span></div><div class="course-type">مکالمه، اصطلاحات، کتاب‌های معتبر</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">زبان عمومی</span><span class="course-price">۳۱۵k</span></div><div class="course-type">مکالمه، اصطلاحات، کتاب‌های معتبر</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -849,12 +869,12 @@
                     <div id="elementaryIranSubjects" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('scienceElementaryIran', this)">🔬 علوم <i>▼</i></div>
                             <div id="scienceElementaryIran" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">علوم دبستان</span><span class="course-price">۳۱۵k</span></div><div class="course-type">GR 1-6</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">علوم دبستان</span><span class="course-price">۳۱۵k</span></div><div class="course-type">GR 1-6</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('mathElementaryIran', this)">📐 ریاضی <i>▼</i></div>
                             <div id="mathElementaryIran" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضی دبستان</span><span class="course-price">۳۵۰k</span></div><div class="course-type">GR 1-6</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضی دبستان</span><span class="course-price">۳۵۰k</span></div><div class="course-type">GR 1-6</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -863,12 +883,12 @@
                     <div id="guidanceIranSubjects" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('scienceGuidanceIran', this)">🔬 علوم <i>▼</i></div>
                             <div id="scienceGuidanceIran" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">علوم راهنمایی</span><span class="course-price">۳۶۵k</span></div><div class="course-type">GR 7-9</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">علوم راهنمایی</span><span class="course-price">۳۶۵k</span></div><div class="course-type">GR 7-9</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('mathGuidanceIran', this)">📐 ریاضی <i>▼</i></div>
                             <div id="mathGuidanceIran" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضی راهنمایی</span><span class="course-price">۴۱۰k</span></div><div class="course-type">GR 7-9</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">ریاضی راهنمایی</span><span class="course-price">۴۱۰k</span></div><div class="course-type">GR 7-9</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -877,7 +897,7 @@
                     <div id="highschoolIranSubjects" class="menu-level-2">
                         <div class="level-2-item"><div class="level-2-title" onclick="toggleLevel3('allSubjectsHighschoolIran', this)">📖 کلیه دروس <i>▼</i></div>
                             <div id="allSubjectsHighschoolIran" class="menu-level-3">
-                                <div class="course-item"><div class="course-header"><span class="course-name">دروس تخصصی</span><span class="course-price">۴۵۰k</span></div><div class="course-type">GR 10-12</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو دوره</button></div>
+                                <div class="course-item"><div class="course-header"><span class="course-name">دروس تخصصی</span><span class="course-price">۴۵۰k</span></div><div class="course-type">GR 10-12</div><button class="reserve-small-btn" onclick="alert('شماره تماس: ۰۹۱۷۴۱۲۳۴۲۸')">رزرو</button></div>
                             </div>
                         </div>
                     </div>
@@ -974,18 +994,18 @@
 
         <!-- ===== OFFER SECTION ===== -->
         <div class="offer-section">
-            <div class="offer-title">✦ پیشنهاد ویژه نورولرن ✦</div>
+            <div class="offer-title">پیشنهاد ویژه نورولرن</div>
 
             <div class="offer-checklist">
-                <div class="check-item"><span class="check-icon">✅</span> <span><span class="highlight">دو فرزند</span> (خواهر یا برادر)</span></div>
-                <div class="check-item"><span class="check-icon">✅</span> <span><span class="highlight">۳ جلسه یا بیشتر</span> رزرو</span></div>
-                <div class="check-item"><span class="check-icon">✅</span> <span>برنده <span class="highlight">قرعه‌کشی ماهانه</span></span></div>
-                <div class="check-item"><span class="check-icon">✅</span> <span><span class="highlight">۲ دوره یا بیشتر</span> ثبت‌نام</span></div>
-                <div class="check-item"><span class="check-icon">❓</span> <span><span class="highlight">اولین جلسه</span> شماست؟</span></div>
+                <div class="check-item"><span class="check-icon">✓</span> <span><span class="highlight">دو فرزند</span> (خواهر یا برادر)</span></div>
+                <div class="check-item"><span class="check-icon">✓</span> <span><span class="highlight">۳ جلسه یا بیشتر</span> رزرو</span></div>
+                <div class="check-item"><span class="check-icon">✓</span> <span>برنده <span class="highlight">قرعه‌کشی ماهانه</span></span></div>
+                <div class="check-item"><span class="check-icon">✓</span> <span><span class="highlight">۲ دوره یا بیشتر</span> ثبت‌نام</span></div>
+                <div class="check-item"><span class="check-icon">?</span> <span><span class="highlight">اولین جلسه</span> شماست؟</span></div>
             </div>
 
             <div class="special-gift">
-                <div class="gift-title">✨ هدیه همراهان وفادار نورولرن ✨</div>
+                <div class="gift-title">هدیه همراهان وفادار</div>
                 <div class="gift-description">
                     اگر دوست یا آشنای شما پس از معرفی شما،  
                     <span class="gift-highlight">۳ جلسه</span>  
@@ -993,16 +1013,16 @@
                     <div class="gift-highlight">۲ جلسه رایگان</div>  
                     هدیه می‌گیرید.
                 </div>
-                <div class="gift-note">💫 تقدیر از اعتماد شما 💫</div>
+                <div class="gift-note">تقدیر از اعتماد شما</div>
             </div>
 
-            <div class="offer-message">✨ حتی اگر فقط یکی از موارد بالا صدق کند ✨</div>
+            <div class="offer-message">حتی اگر فقط یکی از موارد بالا صدق کند</div>
 
             <a href="sms:09174123428?body=سلام%20من%20واجد%20شرایط%20تخفیف%20ویژه%20هستم." class="offer-contact">
                 📱 ۰۹۱۷۴۱۲۳۴۲۸
             </a>
 
-            <div class="offer-footer">👈 با کلیک روی شماره، پیامک تخفیف ارسال می‌شود</div>
+            <div class="offer-footer">با کلیک روی شماره، پیامک تخفیف ارسال می‌شود</div>
         </div>
 
         <!-- ===== CONTACT INFO ===== -->
@@ -1018,13 +1038,13 @@
 
         <!-- ===== FOOTER ===== -->
         <div class="footer">
-            <div>✦ با افتخار در خدمت شما هستیم ✦</div>
-            <div class="watermark">NeuroLearn Academy — Science Meets Education</div>
+            <div>NeuroLearn Academy</div>
+            <div class="watermark">Science Meets Education</div>
         </div>
 
     </div>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ===== JAVASCRIPT (Same logic, clean) ===== -->
     <script>
         function toggleMainDropdown(category) {
             const dropdowns = {
